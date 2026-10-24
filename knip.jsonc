@@ -23,6 +23,9 @@
     "src/db/pg/schema.ts",
     // Standalone CLI/dev scripts, invoked via package.json scripts
     "scripts/**",
+    // Playwright configs are passed explicitly to the CLI from package.json.
+    "tests/playwright.config.ts",
+    "tests/playwright.free-tools.config.ts",
     // shadcn components are copied in whole; pages use only some exports
     "src/client/components/ui/**",
   ],
