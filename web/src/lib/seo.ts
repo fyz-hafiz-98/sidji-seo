@@ -1,8 +1,8 @@
 import { FREE_TOOL_PATHS } from "@/lib/free-tools/free-tool-paths";
 
 const DEFAULT_SITE_URL = "http://127.0.0.1:4322";
-const DEFAULT_SOCIAL_IMAGE_PATH = "/og/default.png";
-const DEFAULT_SOCIAL_IMAGE_ALT = "SiDJI SEO product preview";
+const DEFAULT_SOCIAL_IMAGE_PATH = "/social-card.jpg";
+const DEFAULT_SOCIAL_IMAGE_ALT = "Upstream OpenSEO marketing archive";
 
 export const SITE_URL = (
   process.env.SITE_URL ??
@@ -103,7 +103,7 @@ export function buildPageSeo({
       { property: "og:image:alt", content: socialImageAlt },
       {
         property: "og:image:type",
-        content: "image/png",
+        content: titleCard ? "image/png" : "image/jpeg",
       },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },

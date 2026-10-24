@@ -163,5 +163,10 @@
     "path": "^web/src/routes/_marketing\\.tsx$",
     "pattern": "Upstream OpenSEO on GitHub",
     "reason": "Explicit attribution of the historical upstream star count; not a SiDJI achievement."
+  },
+  {
+    "path": "^web/src/lib/seo\\.ts$",
+    "pattern": "Upstream OpenSEO marketing archive",
+    "reason": "Explicit attribution of the unchanged historical raster marketing card; no replacement design or SiDJI authorship claim."
   }
 ]

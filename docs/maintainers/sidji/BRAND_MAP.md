@@ -8,7 +8,7 @@
 | Preserve with context | Upstream documentation, community/support and legal references, provider URLs, marketing history/testimonials/prices/demo media                                                                           | Upstream references are not SiDJI support, prices, customers, or achievements. Marketing remains unpublished.                                                                                                                                |
 | Review                | Raster pine symbol/favicons and marketing media                                                                                                                                                           | Existing pine is non-textual and contains no OpenSEO monogram. Repository MIT notice remains; no separate asset license was found. Retain the symbol and canvases without claiming exclusive trademark rights. No generated replacement art. |
 
-The old raster marketing social card is retained as historical media. Shared personal metadata uses `/og/default.png`, produced by the existing social-card renderer with the SiDJI wordmark; the renderer's layout, colors, fonts and canvas are unchanged. Historical screenshots, testimonial copy and demo media are not rewritten.
+The original raster marketing social card is retained with the explicit alt text “Upstream OpenSEO marketing archive”. Its artwork is not redesigned or represented as a SiDJI-created asset. Existing generated title cards use the SiDJI wordmark with their original renderer layout, colors, fonts and canvas. Historical screenshots, testimonial copy and demo media are not rewritten. The marketing archive is not approved for publication.
 
 ## Network destinations
 

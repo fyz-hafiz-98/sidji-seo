@@ -11,7 +11,7 @@ export const Route = createFileRoute("/_marketing/")({
       title: homeTitle,
       description: homeDescription,
       path: "/",
-      imageAlt: "SiDJI SEO product preview",
+      imageAlt: "Upstream OpenSEO marketing archive",
     });
 
     return {
