@@ -1,9 +1,13 @@
 import { expect, test, type Page } from "@playwright/test";
 import { z } from "zod";
-import { installLocalSetupHandler } from "./local-setup-test-utils";
+import {
+  installLocalSetupHandler,
+  openLocalPage,
+  waitForLocalSetup,
+} from "./local-setup-test-utils";
 
 async function openLocal(page: Page, path: string) {
-  await page.goto(path);
+  await openLocalPage(page, path);
 }
 
 test.beforeEach(async ({ page }) => {
@@ -38,6 +42,7 @@ test("renders the personal brand, honest no-key state and local setup links", as
   ).toBeVisible();
   await expect(page.locator('a[href*="plugin_asdk_"]')).toHaveCount(0);
   await page.reload();
+  await waitForLocalSetup(page);
   await expect(page).toHaveTitle("SiDJI SEO");
   await expect(
     page.getByRole("heading", { name: "Agent setup", exact: true }),

@@ -1,4 +1,5 @@
 import { writeFile } from "node:fs/promises";
+import { openLocalPage } from "./local-setup-test-utils";
 import {
   expect,
   type CDPSession,
@@ -180,7 +181,7 @@ export async function openDomainOverview(page: Page, tab: DomainTab) {
     }
     window.sessionStorage.setItem("domain-overview-e2e-cleared", "1");
   });
-  await page.goto("/");
+  await openLocalPage(page, "/");
   await page.waitForURL(/\/p\/([^/]+)\/?$/, {
     timeout: 30_000,
   });
@@ -196,7 +197,7 @@ export async function openDomainOverview(page: Page, tab: DomainTab) {
   });
   if (tab === "pages") params.set("tab", "pages");
 
-  await page.goto(`/p/${match[1]}/domain?${params.toString()}`);
+  await openLocalPage(page, `/p/${match[1]}/domain?${params.toString()}`);
   await expect(
     page.getByRole("heading", { name: "Domain Overview" }),
   ).toBeVisible();

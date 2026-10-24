@@ -1,5 +1,8 @@
 import { expect, test } from "@playwright/test";
-import { installLocalSetupHandler } from "./local-setup-test-utils";
+import {
+  installLocalSetupHandler,
+  openLocalPage,
+} from "./local-setup-test-utils";
 
 import {
   applyFilters,
@@ -26,7 +29,7 @@ test.describe("Domain Overview filters", () => {
 
     const secondUrl = new URL(page.url());
     secondUrl.searchParams.set("domain", SECONDARY_TEST_DOMAIN);
-    await page.goto(secondUrl.toString());
+    await openLocalPage(page, secondUrl.toString());
     await expect(
       page.getByRole("tab", { name: SECONDARY_TEST_DOMAIN }),
     ).toHaveAttribute("aria-selected", "true");
@@ -55,7 +58,7 @@ test.describe("Domain Overview filters", () => {
 
     const secondUrl = new URL(page.url());
     secondUrl.searchParams.set("domain", SECONDARY_TEST_DOMAIN);
-    await page.goto(secondUrl.toString());
+    await openLocalPage(page, secondUrl.toString());
     await expect(
       page.getByRole("tab", { name: SECONDARY_TEST_DOMAIN }),
     ).toHaveAttribute("aria-selected", "true");
@@ -168,7 +171,7 @@ test.describe("Domain Overview filters", () => {
 
     const keywordUrl = new URL(page.url());
     keywordUrl.searchParams.delete("tab");
-    await page.goto(keywordUrl.toString());
+    await openLocalPage(page, keywordUrl.toString());
     await ensureFiltersOpen(page, "Include Terms");
     await expect(page.getByPlaceholder("Min").nth(0)).toHaveValue("10");
   });
@@ -223,14 +226,14 @@ test.describe("Domain Overview filters", () => {
 
     const urlWithoutPageFilters = new URL(page.url());
     urlWithoutPageFilters.searchParams.delete("pMinTraffic");
-    await page.goto(urlWithoutPageFilters.toString());
+    await openLocalPage(page, urlWithoutPageFilters.toString());
     await ensureFiltersOpen(page, "Include Page Terms");
     await expect(page.getByPlaceholder("Min").nth(0)).toHaveValue("20");
     expect(new URL(page.url()).searchParams.get("pMinTraffic")).toBe(null);
 
     const urlWithExplicitPageFilters = new URL(page.url());
     urlWithExplicitPageFilters.searchParams.set("pMinTraffic", "30");
-    await page.goto(urlWithExplicitPageFilters.toString());
+    await openLocalPage(page, urlWithExplicitPageFilters.toString());
     await ensureFiltersOpen(page, "Include Page Terms");
     await expect(page.getByPlaceholder("Min").nth(0)).toHaveValue("30");
   });

@@ -1,4 +1,4 @@
-import type { Page } from "@playwright/test";
+import { expect, type Page } from "@playwright/test";
 
 export async function installLocalSetupHandler(page: Page) {
   // No-key fixtures retain the real setup prompt. Dismiss it as a user would,
@@ -11,4 +11,17 @@ export async function installLocalSetupHandler(page: Page) {
         .click();
     },
   );
+}
+
+export async function waitForLocalSetup(page: Page) {
+  // Attribute reads do not trigger locator handlers. Wait for the resolved
+  // no-key state before tests read controls behind the asynchronous dialog.
+  await expect(
+    page.getByText(/Setup needed: add your DataForSEO API key/),
+  ).toBeVisible({ timeout: 30_000 });
+}
+
+export async function openLocalPage(page: Page, path: string) {
+  await page.goto(path);
+  await waitForLocalSetup(page);
 }
