@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { z } from "zod";
 
 async function openLocal(page: Page, path: string) {
   await page.goto(path);
@@ -89,8 +90,12 @@ test("MCP initializes, discovers unchanged tools and reads local projects withou
       data: { jsonrpc: "2.0", id: 1, method, params },
     });
     expect(response.ok()).toBeTruthy();
-    const body: { result?: Record<string, unknown>; error?: unknown } =
-      await response.json();
+    const body = z
+      .object({
+        result: z.record(z.string(), z.unknown()).optional(),
+        error: z.unknown().optional(),
+      })
+      .parse(await response.json());
     expect(body.error).toBeUndefined();
     return body.result;
   };
