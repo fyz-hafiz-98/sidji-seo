@@ -28,8 +28,9 @@ let service: typeof ServiceModule.GoogleAccountService;
 type Build = Parameters<typeof runBatch>[0];
 
 beforeAll(async () => {
-  // These assertions exercise real SQL, without a disk-persistence contract.
-  client = createClient({ url: "file::memory:" });
+  // LibSQL opens a new connection after each transaction; share the in-memory
+  // database so the same real schema and rollback assertions span connections.
+  client = createClient({ url: "file::memory:?cache=shared" });
   const testDb = drizzle(client);
   vi.doMock("@/db", () => ({ db: testDb }));
   vi.doMock("@/db/runBatch", () => ({
