@@ -81,6 +81,8 @@ test("MCP initializes, discovers unchanged tools and reads local projects withou
   };
   const call = async (method: string, params: object) => {
     const response = await request.post("/mcp", {
+      // The first dev request lazily loads the MCP server and tool graph.
+      timeout: 30_000,
       headers,
       data: { jsonrpc: "2.0", id: 1, method, params },
     });
