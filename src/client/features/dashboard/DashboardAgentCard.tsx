@@ -28,7 +28,7 @@ export function DashboardAgentCard({ projectId }: { projectId: string }) {
   return (
     <Card
       role="region"
-      aria-label="Use OpenSEO in your chatbot"
+      aria-label="Use SiDJI SEO in your chatbot"
       className="relative flex-row flex-wrap items-center gap-x-6 gap-y-4 p-5 pr-9 shadow-none"
     >
       <div className="flex min-w-0 flex-1 basis-[32rem] items-center gap-4">
@@ -42,7 +42,7 @@ export function DashboardAgentCard({ projectId }: { projectId: string }) {
         </div>
         <div className="min-w-0 space-y-1">
           <h2 className="text-sm font-semibold">
-            Use OpenSEO in ChatGPT or Claude
+            Use SiDJI SEO in ChatGPT or Claude
           </h2>
           <p className="truncate text-sm text-muted-foreground">
             Research keywords and audit your site from the chatbot you already

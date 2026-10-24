@@ -515,7 +515,7 @@ export const getGoogleAnalyticsOrganicLandingPagesTool = {
   config: {
     title: "Get Google Analytics organic landing pages",
     description:
-      "Read organic-search landing page sessions, engagement, key events, transactions, and revenue from the project's connected GA4 property. Defaults to the last 28 complete property days. Reads only the GA4 property already connected to an OpenSEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no OpenSEO credits.",
+      "Read organic-search landing page sessions, engagement, key events, transactions, and revenue from the project's connected GA4 property. Defaults to the last 28 complete property days. Reads only the GA4 property already connected to an SiDJI SEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no SiDJI SEO credits.",
     inputSchema: landingPageInputSchema,
     outputSchema: reportOutputSchema,
     annotations: {
@@ -549,7 +549,7 @@ export const getGoogleAnalyticsPagePerformanceTool = {
   config: {
     title: "Get Google Analytics page performance",
     description:
-      "Read page views, users, engagement duration, and key events from the connected GA4 property. Organic Search is the default; set channel to all to include every channel. Reads only the GA4 property already connected to an OpenSEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no OpenSEO credits.",
+      "Read page views, users, engagement duration, and key events from the connected GA4 property. Organic Search is the default; set channel to all to include every channel. Reads only the GA4 property already connected to an SiDJI SEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no SiDJI SEO credits.",
     inputSchema: pagePerformanceInputSchema,
     outputSchema: reportOutputSchema,
     annotations: {
@@ -586,7 +586,7 @@ export const getGoogleAnalyticsKeyEventsTool = {
   config: {
     title: "Get Google Analytics key events",
     description:
-      "Read active GA4 key events with counts and users by event or organic landing page. Previous-period comparison is available for the event breakdown. Reads only the GA4 property already connected to an OpenSEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no OpenSEO credits.",
+      "Read active GA4 key events with counts and users by event or organic landing page. Previous-period comparison is available for the event breakdown. Reads only the GA4 property already connected to an SiDJI SEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no SiDJI SEO credits.",
     inputSchema: keyEventsInputSchema,
     outputSchema: reportOutputSchema,
     annotations: {
@@ -617,7 +617,7 @@ export const getSearchOpportunitiesTool = {
   config: {
     title: "Get search opportunities",
     description:
-      "Join Search Console pages ranking in positions 4–20 with GA4 organic landing-page outcomes, then score matched opportunities by demand, business value, and reachability. Unmatched pages remain visible and unscored. Reads only the Search Console and GA4 properties already connected to an OpenSEO project the caller is authorized to access. The server selects the Google accounts and properties from that project's saved connections. Read-only and uses no OpenSEO credits.",
+      "Join Search Console pages ranking in positions 4–20 with GA4 organic landing-page outcomes, then score matched opportunities by demand, business value, and reachability. Unmatched pages remain visible and unscored. Reads only the Search Console and GA4 properties already connected to an SiDJI SEO project the caller is authorized to access. The server selects the Google accounts and properties from that project's saved connections. Read-only and uses no SiDJI SEO credits.",
     inputSchema: opportunityInputSchema,
     outputSchema: opportunityOutputSchema,
     annotations: {
@@ -653,7 +653,7 @@ export const getGoogleAnalyticsOrganicOverviewTool = {
   config: {
     title: "Get Google Analytics organic overview",
     description:
-      "Answer whether organic traffic is improving with top-line sessions, users, engagement, key events, transactions, revenue, an equal-length previous-period comparison, and a daily or weekly trend. Reads only the GA4 property already connected to an OpenSEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no OpenSEO credits.",
+      "Answer whether organic traffic is improving with top-line sessions, users, engagement, key events, transactions, revenue, an equal-length previous-period comparison, and a daily or weekly trend. Reads only the GA4 property already connected to an SiDJI SEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no SiDJI SEO credits.",
     inputSchema: overviewInputSchema,
     outputSchema: overviewOutputSchema,
     annotations: {
@@ -691,7 +691,7 @@ export const getGoogleAnalyticsTrafficAcquisitionTool = {
   config: {
     title: "Get Google Analytics traffic acquisition",
     description:
-      "Compare session acquisition by channel group, source/medium, or campaign, including sessions, users, engagement, key events, transactions, and revenue. Previous-period comparison is available for channel group; source/medium also reports attribution-quality diagnostics. Reads only the GA4 property already connected to an OpenSEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no OpenSEO credits.",
+      "Compare session acquisition by channel group, source/medium, or campaign, including sessions, users, engagement, key events, transactions, and revenue. Previous-period comparison is available for channel group; source/medium also reports attribution-quality diagnostics. Reads only the GA4 property already connected to an SiDJI SEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no SiDJI SEO credits.",
     inputSchema: trafficAcquisitionInputSchema,
     outputSchema: reportOutputSchema,
     annotations: {
@@ -728,7 +728,7 @@ export const getGoogleAnalyticsEcommercePerformanceTool = {
   config: {
     title: "Get Google Analytics ecommerce performance",
     description:
-      "Read item views, add-to-cart units, purchases, and item revenue by item, or transactions and purchase revenue by landing page. Returns a detected, none, or unknown activity state; landing pages can be limited to those with transactions. Organic Search is the default. Reads only the GA4 property already connected to an OpenSEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no OpenSEO credits.",
+      "Read item views, add-to-cart units, purchases, and item revenue by item, or transactions and purchase revenue by landing page. Returns a detected, none, or unknown activity state; landing pages can be limited to those with transactions. Organic Search is the default. Reads only the GA4 property already connected to an SiDJI SEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no SiDJI SEO credits.",
     inputSchema: ecommerceInputSchema,
     outputSchema: reportOutputSchema,
     annotations: {
@@ -757,7 +757,7 @@ export const getGoogleAnalyticsSiteSearchTool = {
   config: {
     title: "Get Google Analytics site search",
     description:
-      "Read measured internal search terms with search events, users, sessions, engaged sessions, and engagement rate. Requires GA4 site-search measurement. Reads only the GA4 property already connected to an OpenSEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no OpenSEO credits.",
+      "Read measured internal search terms with search events, users, sessions, engaged sessions, and engagement rate. Requires GA4 site-search measurement. Reads only the GA4 property already connected to an SiDJI SEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no SiDJI SEO credits.",
     inputSchema: siteSearchInputSchema,
     outputSchema: reportOutputSchema,
     annotations: {
@@ -795,7 +795,7 @@ export const getGoogleAnalyticsAudienceBreakdownTool = {
   config: {
     title: "Get Google Analytics audience breakdown",
     description:
-      "Read device, country, or new-versus-returning users, sessions, engagement, and key events. Previous-period comparison is available for device and new-versus-returning breakdowns. No demographic or user-level dimensions. Reads only the GA4 property already connected to an OpenSEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no OpenSEO credits.",
+      "Read device, country, or new-versus-returning users, sessions, engagement, and key events. Previous-period comparison is available for device and new-versus-returning breakdowns. No demographic or user-level dimensions. Reads only the GA4 property already connected to an SiDJI SEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no SiDJI SEO credits.",
     inputSchema: audienceInputSchema,
     outputSchema: reportOutputSchema,
     annotations: {
@@ -825,7 +825,7 @@ export const getGoogleAnalyticsMeasurementHealthTool = {
   config: {
     title: "Get Google Analytics measurement health",
     description:
-      "Diagnose the connected property's data streams, web measurement IDs, enhanced-measurement settings, key events, and custom definitions. Reads only the GA4 property already connected to an OpenSEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no OpenSEO credits.",
+      "Diagnose the connected property's data streams, web measurement IDs, enhanced-measurement settings, key events, and custom definitions. Reads only the GA4 property already connected to an SiDJI SEO project the caller is authorized to access. The server selects the Google account and property from that project's saved connection. Read-only and uses no SiDJI SEO credits.",
     inputSchema: measurementHealthInputSchema,
     outputSchema: measurementHealthOutputSchema,
     annotations: {

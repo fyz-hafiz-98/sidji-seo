@@ -48,8 +48,8 @@ function BetaNotice() {
         </Button>
       </div>
       <p className="mt-1.5 text-xs text-muted-foreground">
-        For more powerful AI workflows, use the OpenSEO MCP with your own agent
-        like Claude Code or Hermes.
+        For more powerful AI workflows, use the SiDJI SEO MCP with your own
+        agent like Claude Code or Hermes.
       </p>
       <Link
         to="/ai"

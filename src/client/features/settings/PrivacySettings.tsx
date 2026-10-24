@@ -28,7 +28,7 @@ export function PrivacySettings() {
         <div>
           <p className="text-sm">Usage analytics</p>
           <p className="mt-1 text-sm text-muted-foreground">
-            Share usage analytics and session replays to help improve OpenSEO.
+            Share usage analytics and session replays to help improve SiDJI SEO.
           </p>
         </div>
         <Switch

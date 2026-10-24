@@ -8,7 +8,9 @@ concurrency:
   cancel-in-progress: true
 jobs:
   upload:
-    if: github.repository != 'every-app/open-seo'
+    # This inherited upload is only for the upstream private deployment.
+    # Personal forks must never upload to an upstream analytics project.
+    if: github.repository == 'bensenescu/open-seo'
     runs-on: ubuntu-latest
     env:
       POSTHOG_SOURCEMAPS: "true"

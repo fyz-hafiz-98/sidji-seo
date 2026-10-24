@@ -1,88 +1,45 @@
-# OpenSEO
+# SiDJI SEO
 
-> Open source alternative to Semrush and Ahrefs
+Personal, self-hosted fork/rebrand of [OpenSEO](https://github.com/every-app/open-seo). Existing design, navigation and SEO capabilities are preserved. Original source history and [MIT copyright/permission notice](LICENSE) remain intact; this is not a claim that the code was written from scratch.
 
-OpenSEO is an SEO tool for _the people_. If tools like Semrush or Ahrefs are too expensive or bloated, OpenSEO is a pay-as-you-go alternative that you actually control.
+The implementation is on `feat/sidji-seo-rebrand` pending maintainer review. The fork's default branch remains at its upstream baseline until that review is complete.
 
-> All-in-one SEO tool for you and your AI agent.
+## Run locally (Windows PowerShell)
 
-Connect with any agent like Claude Code, OpenClaw or Hermes. We have pre-built skills, but you can build your own to tailor OpenSEO to your needs.
+Use Node.js 22/24 and the declared pnpm 10.30.1 through Corepack:
 
-<img width="100%" alt="openseo-keyword-research" src="https://github.com/user-attachments/assets/8ebdc439-3e72-41ab-8bde-8cda771ef2e8" />
-
-## Hosted Version
-
-Try OpenSEO for free on our website. If you want to support the project, a hosted subscription is $10/month.
-
-[openseo.so](https://openseo.so)
-
-## Why use OpenSEO?
-
-- Best in class MCP and AI Skills.
-- Modern, simple UI.
-  - Focused workflows instead of a bloated, complex SEO suite.
-- No subscriptions.
-  - Bring your own DataForSEO API key and pay only for what you use.
-- Fork and vibe code your own custom tool.
-
-## Main SEO Workflows
-
-- Keyword research
-- Rank tracking
-- Competitor Insights
-- Backlinks
-- Site Audits
-- AI Visibility
-
-## OpenSEO MCP & Agent Skills
-
-OpenSEO exposes an MCP server so AI agents like Claude Code, OpenClaw, and Hermes can use your SEO data directly. Agent Skills are reusable workflows that guide your agent through SEO tasks using the MCP.
-
-- [Set up ChatGPT web or desktop](https://openseo.so/docs/chatgpt) (works on Free and paid ChatGPT plans)
-- [Set up Codex](https://openseo.so/docs/codex-plugin)
-- [Set up OpenSEO MCP](https://openseo.so/docs/mcp)
-- [Set up OpenSEO Agent Skills](https://openseo.so/docs/skills/setup)
-
-## Self-Hosting
-
-OpenSEO supports two self-hosting paths:
-
-- **Simple: Docker (Best for testing it out)** - For personal use on your own machine. See [`docs/SELF_HOSTING_DOCKER.md`](./docs/SELF_HOSTING_DOCKER.md).
-  - Unless you already are self-hosting other apps and are confident doing so, we recommend self-hosting with Cloudflare as opposed to Railway, Coolify or Dokploy.
-  - We plan to make it simpler to host on those platforms in the next few months.
-- **Recommended: Cloudflare** - For internet-facing self-hosting across multiple devices or with your team (works on the free plan). See [`docs/SELF_HOSTING_CLOUDFLARE.md`](./docs/SELF_HOSTING_CLOUDFLARE.md).
-
-Either way, you need a DataForSEO API key to get SEO data. See [`docs/DATAFORSEO_API_KEY.md`](./docs/DATAFORSEO_API_KEY.md).
-
-## Costs
-
-OpenSEO needs a [DataForSEO](https://dataforseo.com/?aff=255379) API key so that you can get SEO data. You pay them directly when self hosting.
-
-See [openseo.so/pricing](https://openseo.so/pricing)
-
-When you self host, your costs will be slightly lower than the estimates on our website. The way the hosted service makes money is by charging 28% extra for every request we make to DataForSEO.
-
-## Local Development
-
-See [`docs/LOCAL_DEVELOPMENT.md`](./docs/LOCAL_DEVELOPMENT.md).
-
-## Contributing
-
-Creating clear issues is the best way to contribute.
-
-Read more here: [`docs/CONTRIBUTING.md`](./docs/CONTRIBUTING.md)
-
-We have this skill: `/simple-issue-description` which helps.
-
-```sh
-npx skills add every-app/open-seo --skill simple-issue-description
+```powershell
+corepack pnpm install --frozen-lockfile
+if (!(Test-Path .env.local)) { Copy-Item .env.example .env.local }
+corepack pnpm run db:migrate:local
+corepack pnpm exec vite dev --host 127.0.0.1 --strictPort
 ```
 
-## Community
+Open [SiDJI SEO locally](http://127.0.0.1:3001). Stop with Ctrl+C. The personal template selects trusted local no-auth mode and opts out of existing self-host telemetry. Keep it on loopback; public hosting is not configured.
 
-Join Discord to chat: [Discord](https://discord.gg/c9uGs3cFXr)
+## Existing capabilities
 
-Follow along for updates:
+Keyword research and saved keywords; competitor/domain research; backlinks; rank tracking; site audits; Google Search Console and GA4; AI visibility; reports; project context; MCP and twelve public agent workflows. SAM retains its existing identity and behavior. Provider integrations need your own credentials and may incur provider charges.
 
-- Follow on X: https://x.com/bensenescu
-- Sign up for the mailing list on our website: [openseo.so](https://openseo.so)
+Without keys, the app shows configuration-required/disconnected states. Local checks do not imply that live research, Google OAuth, AI generation or paid scheduling has been tested. Sharing retains the upstream hosted-only restrictions.
+
+The inherited filter-performance budget under 6× CPU throttling also fails on the baseline application on this machine. It remains a failing check; see the validation record for the exact functional results and limitations.
+
+## Personal setup
+
+- [Setup, environment, local MCP and custom Docker build](docs/SIDJI_SEO_SETUP.md)
+- [Operations, consistent backup, update and rollback](docs/SIDJI_SEO_OPERATIONS.md)
+- [Validation evidence and limitations](docs/maintainers/sidji/VALIDATION.md)
+- [Handoff](docs/maintainers/sidji/HANDOFF.md)
+
+Compose builds this checkout as sidji-seo:local, with its host port on 127.0.0.1. It must not run the upstream image and be mistaken for the rebrand. Docker availability and runtime verification are recorded in validation.
+
+The plugin targets http://127.0.0.1:3001/mcp. Technical openseo IDs, tool schemas, database IDs, theme keys and storage identifiers are preserved. Cloud clients require a separately configured authenticated HTTPS deployment; they cannot reach laptop localhost. No global AI client configuration is changed.
+
+Remote deploy, release, registry and upload commands are guarded pending separate configuration/authorization. No public deployment, upstream push or paid API use is part of this fork setup.
+
+## Upstream and historical content
+
+Upstream documentation remains available in docs/ and the original repository. The separate web/ project contains inherited articles, testimonials, pricing, legal text and demo media. Shared branding/metadata are adapted, but historical claims are not renamed into SiDJI achievements. It is an unpublished archive requiring a separate review before any public marketing use.
+
+GitHub source visibility is public because this is a public upstream fork. Keep API keys, databases, private responses and screenshots out of Git.

@@ -16,9 +16,9 @@ function OpenrouterApiKeyHelpPage() {
       title="Set up your OpenRouter API key"
       intro={
         <>
-          OpenSEO needs the <code>OPENROUTER_API_KEY</code> secret before AI
+          SiDJI SEO needs the <code>OPENROUTER_API_KEY</code> secret before AI
           features like SAM, the in-app SEO agent, can run. It is optional —
-          everything else in OpenSEO works without it.
+          everything else in SiDJI SEO works without it.
         </>
       }
       secretName="OPENROUTER_API_KEY"
@@ -61,7 +61,7 @@ function OpenrouterApiKeyHelpPage() {
               </li>
             </ul>
           </li>
-          <li>Restart OpenSEO.</li>
+          <li>Restart SiDJI SEO.</li>
         </>
       }
       dashboardPasteStep="Paste your OpenRouter API key and save."

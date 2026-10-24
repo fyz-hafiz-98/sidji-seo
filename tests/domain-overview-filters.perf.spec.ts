@@ -1,4 +1,6 @@
 import { expect, test } from "@playwright/test";
+import { installLocalSetupHandler } from "./local-setup-test-utils";
+
 import {
   attachDomainPerfMetrics,
   attachJsonArtifact,
@@ -16,6 +18,10 @@ import {
   typeIntoDraftInput,
   waitForDomainRows,
 } from "./domain-overview-test-utils";
+
+test.beforeEach(async ({ page }) => {
+  await installLocalSetupHandler(page);
+});
 
 const CPU_THROTTLE_RATE = Number(process.env.DOMAIN_FILTER_CPU_THROTTLE ?? 6);
 const PERF_BUDGETS = {
@@ -48,9 +54,6 @@ test.describe("Domain Overview filter performance", () => {
 
     await installDomainPerfProbe(page);
     const client = await page.context().newCDPSession(page);
-    await client.send("Emulation.setCPUThrottlingRate", {
-      rate: CPU_THROTTLE_RATE,
-    });
 
     const checkpoints: PerfCheckpoint[] = [];
     let finalMetrics: DomainPerfMetrics | null = null;
@@ -69,6 +72,16 @@ test.describe("Domain Overview filter performance", () => {
     try {
       await openDomainOverview(page, "pages");
       await waitForDomainRows(page, "Top Pages");
+      // Setup is complete; avoid measuring the harness's dialog scan on every
+      // action alongside the application's filter work.
+      await page.removeLocatorHandler(
+        page.getByRole("dialog", { name: "One quick setup step" }),
+      );
+      // Measure the existing edit flow under throttling, after real startup.
+      // Cold dev-module loading is outside the metrics reset below.
+      await client.send("Emulation.setCPUThrottlingRate", {
+        rate: CPU_THROTTLE_RATE,
+      });
       await resetDomainPerfMetrics(page);
       await captureCheckpoint("ready on Top Pages");
 

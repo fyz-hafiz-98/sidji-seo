@@ -173,8 +173,8 @@ export function ShopifyCrawlWarning({
             <AlertTitle>Shopify limited this crawl.</AlertTitle>
             <p className="text-muted-foreground">
               Shopify rate-limits crawlers it hasn't authorized, so parts of
-              this report are missing. If you own this store, authorizing
-              OpenSEO takes about a minute.
+              this report are missing. If you own this store, authorizing SiDJI
+              SEO takes about a minute.
             </p>
           </>
         )}

@@ -1,0 +1,172 @@
+[
+  {
+    "path": "^(?:docs/|README\\.md$|LICENSE$|SECURITY\\.md$|AGENTS\\.md$|\\.claude/|\\.oss-scanner/|specs/)",
+    "pattern": ".",
+    "reason": "Upstream provenance, history, engineering guidance, or documented compatibility classification; not runtime product identity."
+  },
+  {
+    "path": "(?:\\.test\\.|^tests/|^src/server/features/ai-visibility/aiVisibilityTestDb\\.ts$)",
+    "pattern": ".",
+    "reason": "Deterministic upstream/provider/user fixtures and compatibility test descriptions; not production brand copy."
+  },
+  {
+    "path": "^web/(?!(?:src/routes/_marketing\\.tsx$|src/routes/_marketing/index\\.tsx$|src/lib/(?:seo\\.ts|layout\\.shared\\.tsx)$|src/components/(?:blog-layout|site-footer)\\.tsx$|public/site\\.webmanifest$|scripts/generate-social-cards\\.js$))",
+    "pattern": ".",
+    "reason": "Unpublished upstream marketing archive: historical articles, testimonials, pricing, legal material, media and technical configuration retain their provenance. Operational setup links are checked separately."
+  },
+  {
+    "path": "^(?:wrangler.*\\.jsonc$|deploy/|scripts/|vite.*\\.ts$|package\\.json$|pnpm.*|knip\\.jsonc$|\\.github/|\\.npmrc$|tsconfig.*)",
+    "pattern": ".",
+    "reason": "Existing technical package/resource/volume/deployment identifiers and guarded upstream maintenance references; no cosmetic migration."
+  },
+  {
+    "path": "^(?:src/|plugins/|\\.agents/)",
+    "pattern": "^\\s*(?://|/\\*|\\*|\\{/\\*)",
+    "reason": "Architecture comments or historical source context."
+  },
+  {
+    "path": "^(?:src/|plugins/|\\.agents/)",
+    "pattern": "(?:OpenSEO-(?:Audit|Onboarding|IndexNow)|system@openseo\\.so)",
+    "reason": "Stable crawler identity/WAF contract or internal scheduled actor identifier."
+  },
+  {
+    "path": "^src/",
+    "pattern": "(?:openSeo[A-Z]|OpenSeo[A-Z]|[a-z]OpenSeo|virtual:openseo|openseo-fact-sheet|openseo-public-skills|ui://openseo|openseo:|openseo-dark|openseo-report|\\\"openseo\\\")",
+    "reason": "Protocol, function/type, module, theme, storage or event compatibility identifier."
+  },
+  {
+    "path": "^(?:src/shared/(?:privacy-choices|terms)\\.ts$|src/client/lib/support\\.ts$|src/client/styles/|src/worker-configuration\\.d\\.ts$)",
+    "pattern": ".",
+    "reason": "Persistent privacy/theme identifiers, inherited legal references, generated binding types, or explicitly upstream contact."
+  },
+  {
+    "path": "^src/",
+    "pattern": "https://openseo\\.so/(?:docs/|privacy|terms-and-conditions)",
+    "reason": "Upstream reference documentation or legal page; not an app/MCP endpoint."
+  },
+  {
+    "path": "^src/routes/_app/(?:support|billing_\\.fix-payment)\\.tsx$",
+    "pattern": "(?:[Uu]pstream OpenSEO|OpenSEO's|support@openseo\\.so)",
+    "reason": "Clearly identified upstream community/contact or inactive hosted billing support compatibility."
+  },
+  {
+    "path": "^src/routes/_authenticated\\.yc\\.tsx$",
+    "pattern": "Upstream OpenSEO for YC founders",
+    "reason": "Historical upstream hosted offer, not a SiDJI achievement or offer."
+  },
+  {
+    "path": "^src/server/features/sam/openseo-fact-sheet\\.md$|^src/client/features/ai-mcp/agentUpdatePrompt\\.md$|^\\.agents/skills/setup-openseo/SKILL\\.md$",
+    "pattern": "(?:OpenSEO|openseo|open-seo)",
+    "reason": "Personal setup/provenance and explicit prohibition on substituting hosted upstream; server ID stays compatible."
+  },
+  {
+    "path": "^plugins/openseo/\\.(?:codex|claude|cursor)-plugin/plugin\\.json$",
+    "pattern": "(?:\\\"name\\\": \\\"(?:OpenSEO|openseo)\\\"|support@openseo\\.so|https://openseo\\.so|fork of OpenSEO)",
+    "reason": "Original author attribution and stable plugin identifier; display identity/instance endpoint checked separately."
+  },
+  {
+    "path": "^plugins/openseo/\\.mcp\\.json$|^\\.(?:agents/plugins|claude-plugin|cursor-plugin)/marketplace\\.json$",
+    "pattern": "(?:openseo|open-seo)",
+    "reason": "Existing marketplace/plugin ID and source folder retained for compatibility."
+  },
+  {
+    "path": "^(?:plugins/openseo/skills/|\\.agents/skills/)",
+    "pattern": "(?:openseo:|openseo__|openseo-|OpenSEO-Audit)",
+    "reason": "Client tool namespace or crawler contract in preserved workflows."
+  },
+  {
+    "path": "^\\.agents/(?:PAPERCUTS\\.md|skills/(?:create-repo-skill|deslop|evaluate-skill|merge-ready|observability-triage|openseo-release-notes|openseo-review-web-content|papercuts|review-brief|review-simplify|review-ui-states|simple-issue-description|test-audit|verify-local-mcp)/)",
+    "pattern": ".",
+    "reason": "Internal upstream maintenance history/guidance; not shipped public product workflows."
+  },
+  {
+    "path": "^src/server/lib/self-host-telemetry\\.ts$",
+    "pattern": ".",
+    "reason": "Existing telemetry implementation/namespace; opted out in personal configuration."
+  },
+  {
+    "path": "^web/src/(?:routes/_marketing\\.tsx|lib/layout\\.shared\\.tsx|components/(?:blog-layout|site-footer)\\.tsx)$",
+    "pattern": "(?:github.com/every-app/open-seo|/openseo-vs-dataforseo|/why-openseo|OpenSEO vs DataForSEO|Why OpenSEO|openseo\\.so)",
+    "reason": "Shared shell links to explicitly retained upstream history, comparison routes or community material."
+  },
+  {
+    "path": "^web/src/lib/seo\\.ts$",
+    "pattern": "/openseo-vs-dataforseo",
+    "reason": "Existing route path remains stable."
+  },
+  {
+    "path": "^web/src/routes/_marketing/index\\.tsx$",
+    "pattern": "(?:fork of OpenSEO|Upstream OpenSEO)",
+    "reason": "Truthful fork provenance and historical screenshot attribution."
+  },
+  {
+    "path": "^plugins/openseo/README\\.md$",
+    "pattern": "(?:OpenSEO|openseo|open-seo)",
+    "reason": "Personal plugin provenance, stable identifiers and explicit hosted upstream prohibition."
+  },
+  {
+    "path": "^(?:\\.env\\.example$|compose\\.yaml$)",
+    "pattern": "(?:OPENSEO_TELEMETRY_DISABLED|open-seo)",
+    "reason": "Existing environment/service/volume compatibility identifier; personal defaults and local image are separately checked."
+  },
+  {
+    "path": "^(?:plugins/openseo/skills/|\\.agents/skills/|src/routes/_app/ai\\.tsx$)",
+    "pattern": "(?:github\\.com/fyz-hafiz-98/sidji-seo/|REPOSITORY_URL.*plugins/openseo|Where openseo\\.so stands:)",
+    "reason": "Verified fork workflow source path, stable folder name, or explicitly retained example site data."
+  },
+  {
+    "path": "^src/",
+    "pattern": "https://github\\.com/every-app/open-seo/(?:blob|tree)/",
+    "reason": "Upstream reference documentation; not operational instance or deployment target."
+  },
+  {
+    "path": "^src/",
+    "pattern": "https://openseo\\.so/blogs/",
+    "reason": "Upstream educational article, preserved as reference material."
+  },
+  {
+    "path": "^src/(?:lib/auth(?:-redirect)?\\.ts|server/auth/sign-up-analytics\\.ts|server/email/loops\\.ts)$",
+    "pattern": "(?:openseo\\.local|open-seo\\.localhost|openseo-signup)",
+    "reason": "Synthetic URL parsing origin, existing local development allowlist, or email provider source tag."
+  },
+  {
+    "path": "^src/server/mcp/tools/tool-test-support\\.ts$",
+    "pattern": "open-seo\\.test",
+    "reason": "Test harness origin; never a live endpoint."
+  },
+  {
+    "path": "^src/routes/_authenticated\\.subscribe\\.tsx$",
+    "pattern": "https://openseo\\.so/pricing",
+    "reason": "Inactive inherited hosted offer reference; personal no-auth mode does not use hosted subscriptions."
+  },
+  {
+    "path": "^web/src/routes/_marketing\\.tsx$",
+    "pattern": "(?:every-app/open-seo|openseo-landing)",
+    "reason": "Upstream star count provenance and existing user-agent for its read-only GitHub metadata fetch."
+  },
+  {
+    "path": "^web/src/components/site-footer\\.tsx$",
+    "pattern": "ycombinator\\.com/companies/openseo",
+    "reason": "Historical upstream company profile; not a SiDJI affiliation."
+  },
+  {
+    "path": "^src/client/features/ai-mcp/agentSetupPrompt\\.ts$",
+    "pattern": "setup-openseo/SKILL",
+    "reason": "Existing installer skill path retained for compatibility."
+  },
+  {
+    "path": "^plugins/openseo/\\.cursor-plugin/plugin\\.json$",
+    "pattern": "raw\\.githubusercontent\\.com/fyz-hafiz-98/sidji-seo/",
+    "reason": "Non-text icon from this fork; compatibility source folder retained."
+  },
+  {
+    "path": "^web/src/routes/_marketing\\.tsx$",
+    "pattern": "Upstream OpenSEO on GitHub",
+    "reason": "Explicit attribution of the historical upstream star count; not a SiDJI achievement."
+  },
+  {
+    "path": "^web/src/lib/seo\\.ts$",
+    "pattern": "Upstream OpenSEO marketing archive",
+    "reason": "Explicit attribution of the unchanged historical raster marketing card; no replacement design or SiDJI authorship claim."
+  }
+]

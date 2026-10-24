@@ -31,7 +31,7 @@ export function ReportsList({
       <EmptyState
         icon={FileText}
         title="No reports yet"
-        description="Run an OpenSEO skill such as seo-audit from Claude Code or Codex and the report will appear here."
+        description="Run an SiDJI SEO skill such as seo-audit from Claude Code or Codex and the report will appear here."
       />
     );
   }

@@ -8,10 +8,10 @@ export function registerWidgetResource(server: McpServer) {
       csp: { connectDomains: [], resourceDomains: [] },
     },
     "openai/widgetDescription":
-      "OpenSEO Search Console performance and Google search results. Users can connect Search Console in OpenSEO, inspect results, and send a selection back to the conversation.",
+      "SiDJI SEO Search Console performance and Google search results. Users can connect Search Console in SiDJI SEO, inspect results, and send a selection back to the conversation.",
   };
   server.registerResource(
-    "OpenSEO research",
+    "SiDJI SEO research",
     MCP_WIDGET_URI,
     { mimeType: "text/html;profile=mcp-app", _meta: meta },
     async () => {

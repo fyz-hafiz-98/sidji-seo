@@ -3,7 +3,7 @@ import { trackTool } from "@/lib/free-tools/analytics";
 import { type FreeTool, freeTools } from "@/lib/free-tools/tool-pages";
 import { buildBreadcrumbJsonLd, SITE_URL, toCanonicalUrl } from "@/lib/seo";
 
-const SIGNUP_URL = "https://app.openseo.so/sign-up";
+const SIGNUP_URL = "http://127.0.0.1:3001";
 
 type ToolHighlight = { title: string; description: string };
 

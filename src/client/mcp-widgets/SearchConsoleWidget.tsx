@@ -326,7 +326,7 @@ export function SearchConsoleWidget({
       )}
       {saved && (
         <p role="status" className="text-sm">
-          Keywords saved to OpenSEO.
+          Keywords saved to SiDJI SEO.
         </p>
       )}
       {rows.length > 0 && (

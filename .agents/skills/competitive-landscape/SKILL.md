@@ -3,7 +3,7 @@ name: competitive-landscape
 description: Map SEO market leaders, winning content themes, keyword coverage, backlinks, and strategic gaps.
 ---
 
-# OpenSEO Competitive Landscape
+# SiDJI SEO Competitive Landscape
 
 ## Goal
 
@@ -31,7 +31,7 @@ The project-context tools are free and shared with the app and other agents.
 
 Deliver through the `seo-report` skill, saving with `skill: "competitive-landscape"`. If that skill is not available, say so and stop before writing HTML.
 
-## OpenSEO MCP tools
+## SiDJI SEO MCP tools
 
 - `research_keywords`: discover representative market queries.
 - `get_keyword_metrics`: validate known query sets with volume, difficulty, intent, and trends.
@@ -76,12 +76,12 @@ Sections in this order:
 3. **Why they win** — one finding per pattern, the Fix pointing at what the user should do instead.
 4. **Gaps and openings** — a table of theme, demand, and who currently owns it, plus a bar chart when a handful of themes carry the demand.
 5. **What to do next** — an ordered list ending in the next workflow to run: competitor analysis, keyword clustering, or a content brief.
-6. **How this report was made** — opens with the skill link line from `seo-report`, pointing at `https://openseo.so/docs/skills/competitive-landscape` ("OpenSEO Competitive Landscape skill"), then the query set used, and a note calling the read directional when the query set was small.
+6. **How this report was made** — opens with the skill link line from `seo-report`, pointing at `https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo/skills/competitive-landscape` ("SiDJI SEO Competitive Landscape skill"), then the query set used, and a note calling the read directional when the query set was small.
 
 ## Guardrails
 
 - Distinguish SEO competitors from business competitors.
-- Do not overstate exact traffic when OpenSEO returns estimates.
+- Do not overstate exact traffic when SiDJI SEO returns estimates.
 - If using a small query set, call the result directional.
 - Do not assume a publisher is a product competitor; label domain types clearly.
 - For local markets, distinguish organic-page winners from Maps/local-pack winners.

@@ -1,6 +1,4 @@
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { readFileSync } from "node:fs";
 import { createClient, type Client } from "@libsql/client";
 import { drizzle } from "drizzle-orm/libsql";
 import {
@@ -39,10 +37,9 @@ vi.mock("@/server/features/google/oauth-config", () => ({
 }));
 
 // The state row and the grant upsert both need real SQL (partial unique index,
-// delete ... returning), so the module runs against a libsql file.
+// delete ... returning), so the module runs against real in-memory SQLite.
 let client: Client;
 let oauth: typeof OAuthModule;
-const directory = mkdtempSync(join(tmpdir(), "google-oauth-"));
 
 function migrationStatements(file: string, include: (sql: string) => boolean) {
   return readFileSync(file, "utf8")
@@ -52,7 +49,7 @@ function migrationStatements(file: string, include: (sql: string) => boolean) {
 }
 
 beforeAll(async () => {
-  client = createClient({ url: `file:${join(directory, "test.db")}` });
+  client = createClient({ url: "file::memory:" });
   vi.doMock("@/db", () => ({ db: drizzle(client) }));
   // `account` references `user`; libsql enforces foreign keys by default.
   await client.executeMultiple(
@@ -76,7 +73,6 @@ beforeAll(async () => {
 
 afterAll(() => {
   client.close();
-  rmSync(directory, { recursive: true });
 });
 
 const userId = "user-1";

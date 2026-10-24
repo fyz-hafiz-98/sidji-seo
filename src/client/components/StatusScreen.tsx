@@ -22,7 +22,7 @@ export function StatusScreen({
   footer,
   size = "md",
 }: {
-  /** Show the OpenSEO logo, for screens outside the app shell. */
+  /** Show the SiDJI SEO logo, for screens outside the app shell. */
   logo?: boolean;
   title?: ReactNode;
   description?: ReactNode;
@@ -47,7 +47,7 @@ export function StatusScreen({
         {logo ? (
           <img
             src="/transparent-logo.png"
-            alt="OpenSEO"
+            alt="SiDJI SEO"
             className="size-10 rounded-lg"
           />
         ) : null}

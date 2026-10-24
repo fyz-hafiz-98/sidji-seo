@@ -69,7 +69,7 @@ function getMobileNavItems(githubStarCount: string) {
       label: "Community",
       links: [
         {
-          label: `GitHub ${githubStarCount}`,
+          label: `Upstream GitHub ${githubStarCount}`,
           href: "https://github.com/every-app/open-seo",
         },
       ],
@@ -184,7 +184,7 @@ function MarketingLayout() {
               to="/"
               className="text-xl font-medium tracking-[-0.06em] hover:opacity-80 transition-opacity"
             >
-              OpenSEO
+              SiDJI SEO
             </Link>
 
             <div className="hidden items-center gap-7 md:flex">
@@ -212,16 +212,16 @@ function MarketingLayout() {
                 href="https://github.com/every-app/open-seo"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`GitHub, ${githubStarCount} stars`}
+                aria-label={`Upstream OpenSEO on GitHub, ${githubStarCount} stars`}
                 className="group hidden h-9 items-center gap-1.5 px-2 text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 md:inline-flex"
               >
                 <GitHubIcon size={16} />
                 <span className="text-neutral-500 transition-colors group-hover:text-neutral-900">
-                  {githubStarCount}
+                  Upstream {githubStarCount}
                 </span>
               </a>
               <a
-                href="https://app.openseo.so/sign-in"
+                href="http://127.0.0.1:3001"
                 className="hidden h-9 items-center gap-2 border-l border-[#ded9d2] pl-5 text-sm font-medium text-neutral-900 transition-colors hover:text-neutral-600 md:inline-flex"
               >
                 Sign in <span aria-hidden="true">↗</span>
@@ -233,14 +233,14 @@ function MarketingLayout() {
             <div className="absolute inset-x-0 top-full h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-[#ded9d2] bg-[#f5f1ec] p-4 md:hidden">
               <div className="grid grid-cols-2 gap-2">
                 <a
-                  href="https://app.openseo.so/sign-in"
+                  href="http://127.0.0.1:3001"
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex h-11 items-center justify-center rounded-xl bg-neutral-950 px-3 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
                 >
-                  Try OpenSEO
+                  Try SiDJI SEO
                 </a>
                 <a
-                  href="https://app.openseo.so/sign-in"
+                  href="http://127.0.0.1:3001"
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex h-11 items-center justify-center rounded-xl border border-[#ded9d2] bg-white px-3 text-sm font-medium text-neutral-800 transition-colors hover:border-neutral-900"
                 >
@@ -291,12 +291,12 @@ function ResourcesDropdown() {
     {
       label: "MCP",
       href: "/docs/mcp",
-      description: "Connect OpenSEO to AI clients.",
+      description: "Connect SiDJI SEO to AI clients.",
     },
     {
       label: "Skills",
       href: "/docs/skills",
-      description: "Focused OpenSEO workflows.",
+      description: "Focused SiDJI SEO workflows.",
     },
     {
       label: "Strategy Library",
@@ -402,7 +402,7 @@ function FeatureDropdown() {
                   className="block rounded-md p-2 transition-colors hover:bg-[#f5f1ec]"
                 >
                   <span className="text-sm font-semibold text-neutral-900">
-                    OpenSEO MCP
+                    SiDJI SEO MCP
                   </span>
                   <span className="mt-0.5 block text-xs leading-relaxed text-neutral-600">
                     Connect Claude, Codex, and agents.

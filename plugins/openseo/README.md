@@ -1,55 +1,17 @@
-# OpenSEO for Cursor
+# SiDJI SEO personal plugin
 
-SEO made simple.
+Personal fork of the OpenSEO plugin, retaining its MIT attribution, technical plugin/server ID openseo, tool contracts and twelve public workflows.
 
-OpenSEO gives your agent real SEO data and guided workflows, so its advice is grounded in your website instead of generic recommendations.
+## Connect your instance
 
-## What you can do
+The shipped Streamable HTTP URL is http://127.0.0.1:3001/mcp. Run your SiDJI checkout first, then use your client's supported local/custom plugin installation flow. Do not install the upstream marketplace connector as a fallback: that connector uses hosted OpenSEO.
 
-- Find and evaluate keywords
-- Research competitors and content gaps
-- Audit a website and prioritize fixes
-- Analyze backlinks and find link prospects
-- Track organic and Google Maps rankings
-- Work with Google Search Console and Analytics data
-- Research AI prompts and track brand mentions, citations, and competitors
+Use this checkout's `feat/sidji-seo-rebrand` branch until its PR is merged. The fork's `main` still contains the upstream hosted configuration; do not install from an implicit default branch. Select the review branch explicitly, or use its local plugin directory/custom MCP configuration if the client cannot select a branch.
 
-The plugin includes twelve skills that guide Cursor through complete SEO workflows, plus the hosted OpenSEO MCP server for live data and project management.
+Trusted local_noauth needs no API token and stays on loopback. Cloud clients cannot access this laptop's localhost; authenticated HTTPS hosting needs separate configuration and authorization. No global client settings are modified by this repository.
 
-## Connect
+The plugin provides keyword/competitor research, audits, backlinks, rankings, GSC/GA4 and AI visibility workflows. Live data requires the owner's provider keys; open source does not make paid providers free. Check identity and list projects without purchasing data.
 
-Install the OpenSEO plugin from the Cursor Marketplace. The first time Cursor uses an OpenSEO tool, follow the OAuth prompt to sign in and approve the connection.
+The twelve workflow folders are generated from .agents/skills; maintainers run the repository's sync-plugin-skills script after source edits. Rebranding alone does not change their model choices or workflow steps. Plugin version remains 1.0.23; no tool or shipped workflow was added.
 
-You need an OpenSEO account. The plugin package is free and open source. Hosted OpenSEO plans and usage credits are described at [openseo.so/pricing](https://openseo.so/pricing), and OpenSEO can also be [self-hosted](https://github.com/every-app/open-seo#self-hosting).
-
-## Try it
-
-- "Research keywords for my website and shortlist the best opportunities."
-- "Audit my website and tell me what to fix first."
-- "What does competitor.com rank for that I don't?"
-- "Which pages are close to ranking in Google Search Console?"
-- "Track my rankings for these keywords and summarize what changed."
-- "Help me choose prompts to track in AI answers, and show the cost first."
-
-## Included skills
-
-- AI prompt research
-- AI visibility audit
-- Competitive landscape
-- Competitor analysis
-- Keyword clustering
-- Keyword research
-- Link prospecting
-- Local SEO
-- SEO audit
-- SEO coach
-- SEO project setup
-- SEO report
-
-## Links
-
-- [OpenSEO](https://openseo.so)
-- [MCP documentation](https://openseo.so/docs/mcp)
-- [Privacy policy](https://openseo.so/privacy)
-- [Terms](https://openseo.so/terms-and-conditions)
-- [Support](https://openseo.so/support)
+[Personal setup](https://github.com/fyz-hafiz-98/sidji-seo/blob/feat/sidji-seo-rebrand/docs/SIDJI_SEO_SETUP.md) · [Upstream attribution](https://github.com/every-app/open-seo)

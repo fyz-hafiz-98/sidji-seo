@@ -1,9 +1,7 @@
-Update my installed OpenSEO skills using https://openseo.so/docs/agent-setup#update-your-skills.
+Update my installed SiDJI SEO public workflows from https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo/skills.
 
-If this is ChatGPT on the web or a regular desktop chat, use https://openseo.so/docs/chatgpt#update-openseo. For the OpenSEO plugin, start a new chat to load the latest tools and skills; reconnect only if sign-in needs attention. For a custom MCP connection, select Refresh in its details, then start a new chat. Refreshing a custom connection updates tools, not skill files. Do not run local Codex commands to update ChatGPT web.
+Identify this client and how the existing openseo connection and skills were installed. Check its installed help before using its update command. Update only this integration in its existing scope. Preserve the instance MCP endpoint, authentication, other integrations and personal edits; ask before replacing conflicting edits. Avoid duplicates and internal repository skills.
 
-Identify this agent and how OpenSEO was installed. Use the matching plugin or skills installer, checking the installed client's help before running commands. Update only OpenSEO in its existing scope. Preserve my MCP endpoint, sign-in, and personal skill edits; ask before replacing conflicting edits. Avoid duplicate skills and do not install internal repository skills.
+For manually copied workflows, compare the public folders and supporting files with the fork. A tools refresh does not update local skill files. Reload only if required and verify whoami and list_projects without paid requests.
 
-If the skills were copied manually, compare them with https://github.com/every-app/open-seo/tree/main/plugins/openseo/skills and update the installed public skill folders, including their supporting files. For Grok Bot or another agent without a verified update command, use its supported skill management flow or give me the exact manual steps available in this version.
-
-Reload skills if supported. If I need to reload or start a new session, tell me what to do. Verify the updated skill files and that this agent can discover them; an active MCP connection alone does not prove the skills updated. Briefly tell me what changed and anything left to do. Do not run SEO research during the update.
+Do not install hosted OpenSEO or change the endpoint to their service. A cloud conversation cannot update a local desktop installation or reach this laptop's loopback server. Remote connection needs separately authorized HTTPS hosting with authentication. If no supported update flow exists, explain the manual steps and report verification as incomplete.

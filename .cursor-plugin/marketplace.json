@@ -1,17 +1,17 @@
 {
   "name": "openseo",
   "owner": {
-    "name": "Every App, Inc",
-    "email": "support@openseo.so"
+    "name": "SiDJI SEO (fyz-hafiz-98)",
+    "url": "https://github.com/fyz-hafiz-98/sidji-seo"
   },
   "metadata": {
-    "description": "OpenSEO's official Cursor plugin marketplace."
+    "description": "SiDJI SEO personal fork plugin marketplace."
   },
   "plugins": [
     {
       "name": "openseo",
       "source": "plugins/openseo",
-      "description": "SEO made simple. Research keywords and competitors, audit sites, track rankings, and use Search Console data from your agent."
+      "description": "Personal SiDJI SEO tools and public workflows for your own local instance. Provider credentials required for live data."
     }
   ]
 }

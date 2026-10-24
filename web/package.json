@@ -13,9 +13,9 @@
     "types:check": "fumadocs-mdx && tsc --noEmit",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
-    "deploy": "VITE_REQUIRE_TURNSTILE=1 npm run build && wrangler deploy",
-    "deploy:prod": "VITE_REQUIRE_TURNSTILE=1 npm run build && wrangler deploy",
-    "deploy:preview": "CLOUDFLARE_ENV=preview VITE_REQUIRE_TURNSTILE=1 npm run build && wrangler deploy",
+    "deploy": "node ../scripts/remote-operation-guard.mjs && VITE_REQUIRE_TURNSTILE=1 npm run build && wrangler deploy",
+    "deploy:prod": "node ../scripts/remote-operation-guard.mjs && VITE_REQUIRE_TURNSTILE=1 npm run build && wrangler deploy",
+    "deploy:preview": "node ../scripts/remote-operation-guard.mjs && CLOUDFLARE_ENV=preview VITE_REQUIRE_TURNSTILE=1 npm run build && wrangler deploy",
     "test:protection": "vitest run && node scripts/check-free-tool-budget.cjs"
   },
   "dependencies": {

@@ -26,7 +26,7 @@ export async function renderReportSocialImage(
       <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
         <img src={logo} width={64} height={64} style={{ borderRadius: 14 }} />
         <div style={{ fontSize: 34, fontWeight: 600, letterSpacing: -1 }}>
-          OpenSEO
+          SiDJI SEO
         </div>
       </div>
       <div

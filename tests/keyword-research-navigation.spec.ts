@@ -1,7 +1,15 @@
 import { expect, test, type Page } from "@playwright/test";
+import {
+  installLocalSetupHandler,
+  openLocalPage,
+} from "./local-setup-test-utils";
+
+test.beforeEach(async ({ page }) => {
+  await installLocalSetupHandler(page);
+});
 
 async function getProjectId(page: Page) {
-  await page.goto("/");
+  await openLocalPage(page, "/");
   await page.waitForURL(/\/p\/([^/]+)\/?$/, {
     timeout: 30_000,
   });
@@ -17,7 +25,8 @@ test.describe("Keyword Research navigation", () => {
   }) => {
     const projectId = await getProjectId(page);
 
-    await page.goto(
+    await openLocalPage(
+      page,
       `/p/${projectId}/keywords?q=keyword%20research&loc=2840&kLimit=150&mode=auto`,
     );
     await expect(
@@ -47,14 +56,16 @@ test.describe("Keyword Research navigation", () => {
   }) => {
     const projectId = await getProjectId(page);
 
-    await page.goto(
+    await openLocalPage(
+      page,
       `/p/${projectId}/keywords?q=keyword%20research&loc=2840&kLimit=150&mode=auto`,
     );
     await expect(
       page.getByRole("row", { name: /keyword research/i }).first(),
     ).toBeVisible({ timeout: 30_000 });
 
-    await page.goto(
+    await openLocalPage(
+      page,
       `/p/${projectId}/keywords?q=backlinks&loc=2840&kLimit=150&mode=auto`,
     );
     await expect(
@@ -84,7 +95,8 @@ test.describe("Keyword Research navigation", () => {
     const projectId = await getProjectId(page);
 
     for (const keyword of ["ai seo", "backlinks", "open seo"]) {
-      await page.goto(
+      await openLocalPage(
+        page,
         `/p/${projectId}/keywords?q=${encodeURIComponent(keyword)}&loc=2840&kLimit=150&mode=auto`,
       );
       await expect(

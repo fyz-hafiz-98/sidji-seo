@@ -21,7 +21,7 @@ The project-context tools are free and shared with the app and other agents.
 4. Reuse research-log findings under 30 days old for discovery. A claim that drives a recommendation still needs evidence from a run or a page read during this audit.
 5. On finish, write back the pages the report names with `addKeyPages` and append `{ updates: [{ appendResearchLog: { summary: "AI visibility audit: <run id>. Verdict: <conclusion>" } }] }`.
 
-## OpenSEO MCP tools
+## SiDJI SEO MCP tools
 
 - `get_ai_visibility_results`, `get_ai_visibility_sources`, `get_ai_visibility_answer`: the evidence. Read one run-wide results call, one run-wide sources call with the same `runId`, then answers you need to verify.
 - `get_ai_visibility_trend`: whether visibility is moving, when the tracker has comparable history. Never compute a trend yourself from separate result calls.
@@ -93,7 +93,7 @@ Deliver through the `seo-report` skill, saving with `skill: "ai-visibility-audit
 2. **Recommendations**: one to three `h3` items in priority order. Each has **Do this** (two to four bullets, starting with a verb and naming the page) and **Why** (the prompts and engines, the cited pages behind the gap, and the main uncertainty), plus a small evidence table: Prompt | Engines naming a competitor, not you | Pages cited instead.
 3. **What AI cites in your market**: one table of the top recurring sources. Source | Type | Answers citing it | Lists you? | Lists competitors.
 4. **What else we checked**: Opportunity | What we found | Decision, one line per shortlist row that did not become a recommendation.
-5. **How this report was made**: the fixed skill link line from `seo-report` (URL `https://openseo.so/docs/skills/ai-visibility-audit`, text "OpenSEO AI Visibility Audit skill"), the run ID, collection date, market, engines and coverage, then a `<details><summary>Evidence and methodology</summary>` block with the prompts, the answers and pages read, any fan-out queries checked, and the `robots.txt` rules found.
+5. **How this report was made**: the fixed skill link line from `seo-report` (URL `https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo/skills/ai-visibility-audit`, text "SiDJI SEO AI Visibility Audit skill"), the run ID, collection date, market, engines and coverage, then a `<details><summary>Evidence and methodology</summary>` block with the prompts, the answers and pages read, any fan-out queries checked, and the `robots.txt` rules found.
 
 In chat, lead with one sentence a founder would repeat, built from the evidence, for example: "When people ask AI for the best invoicing app for freelancers, 3 of 4 engines name FreshBooks and cite two review articles that don't list you." Then the leading recommendation and the report link.
 

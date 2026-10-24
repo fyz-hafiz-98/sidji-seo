@@ -77,7 +77,7 @@ export function GoogleAccountRemovalDialog({
         <DialogHeader>
           <DialogTitle>Remove Google account?</DialogTitle>
           <DialogDescription>
-            This removes the account’s {name} connection from OpenSEO. You can
+            This removes the account’s {name} connection from SiDJI SEO. You can
             reconnect it anytime.
           </DialogDescription>
         </DialogHeader>

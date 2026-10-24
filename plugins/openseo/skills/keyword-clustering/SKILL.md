@@ -3,7 +3,7 @@ name: keyword-clustering
 description: Cluster keywords by intent and map them to existing or proposed pages.
 ---
 
-# OpenSEO Keyword Clustering
+# SiDJI SEO Keyword Clustering
 
 ## Goal
 
@@ -30,7 +30,7 @@ The project-context tools are free and shared with the app and other agents.
 
 Deliver through the `seo-report` skill, saving with `skill: "keyword-clustering"`. If that skill is not available, say so and stop before writing HTML.
 
-## OpenSEO MCP tools
+## SiDJI SEO MCP tools
 
 - `list_saved_keywords`: fetch an existing keyword set, optionally filtered by tags.
 - `research_keywords`: expand a seed when the user starts from a topic.
@@ -72,7 +72,7 @@ Sections in this order:
 3. **Page briefs** — one finding per cluster: the page type and the searcher's problem, then the page to create or update. List required sections and internal links underneath.
 4. **Cannibalization** — a table of the query, the competing URLs, and which one to keep, only when there is real evidence for it.
 5. **What to do next** — an ordered list, including the tag suggestions and the explicit ask before applying them.
-6. **How this report was made** — opens with the skill link line from `seo-report`, pointing at `https://openseo.so/docs/skills/keyword-clustering` ("OpenSEO Keyword Clustering skill"), then where the keywords came from, and a note labelling target pages as proposed when no URL data was supplied.
+6. **How this report was made** — opens with the skill link line from `seo-report`, pointing at `https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo/skills/keyword-clustering` ("SiDJI SEO Keyword Clustering skill"), then where the keywords came from, and a note labelling target pages as proposed when no URL data was supplied.
 
 ## Guardrails
 

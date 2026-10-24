@@ -28,9 +28,9 @@ export function SearchConsoleConnection({
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
           {setupUrl
-            ? "This self-hosted OpenSEO instance needs Google OAuth configuration before you can connect a property."
+            ? "This self-hosted SiDJI SEO instance needs Google OAuth configuration before you can connect a property."
             : connection
-              ? "Connect Google and choose a Search Console property in OpenSEO. Then return here and check the connection. Your Google sign-in stays in OpenSEO."
+              ? "Connect Google and choose a Search Console property in SiDJI SEO. Then return here and check the connection. Your Google sign-in stays in SiDJI SEO."
               : host.snapshot?.text}
         </p>
       </div>
@@ -43,8 +43,8 @@ export function SearchConsoleConnection({
             {setupUrl
               ? "Setup instructions"
               : connection
-                ? "Connect in OpenSEO"
-                : "Check connection in OpenSEO"}
+                ? "Connect in SiDJI SEO"
+                : "Check connection in SiDJI SEO"}
             <ExternalLink />
           </Button>
         )}
@@ -63,7 +63,7 @@ export function SearchConsoleConnection({
           disabled={busy}
           onClick={() =>
             host.ask(
-              "Help me research Google search results for this OpenSEO project. Ask me which keyword and market to use first.",
+              "Help me research Google search results for this SiDJI SEO project. Ask me which keyword and market to use first.",
               { projectId: input.projectId },
             )
           }

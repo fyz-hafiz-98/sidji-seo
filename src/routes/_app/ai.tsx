@@ -25,8 +25,9 @@ import {
 } from "@/client/features/ai-mcp/agentSetupPrompt";
 import { CopyButton } from "@/client/components/CopyButton";
 import { AgentList } from "@/client/features/ai-mcp/AgentList";
+import { SETUP_GUIDE_URL, REPOSITORY_URL } from "@/shared/brand";
 
-const DOCS_URL = "https://openseo.so/docs/agent-setup";
+const DOCS_URL = SETUP_GUIDE_URL;
 const COACH_DOCS_URL = "https://openseo.so/docs/skills/seo-coach";
 const LINK_CLASS =
   "text-foreground underline decoration-foreground/25 underline-offset-4 hover:decoration-foreground";
@@ -84,7 +85,7 @@ function AiPage() {
       <div className="mx-auto max-w-7xl">
         <PageHeader
           title="Agent setup"
-          description="The most powerful way to use OpenSEO is through the AI agent you already use. Set it up once, then ask it anything."
+          description="The most powerful way to use SiDJI SEO is through the AI agent you already use. Set it up once, then ask it anything."
         />
 
         <Tabs
@@ -109,7 +110,7 @@ function AiPage() {
                     <h2>Set up your agent</h2>
                   </CardTitle>
                   <CardDescription>
-                    Paste the setup prompt into your agent to connect OpenSEO
+                    Paste the setup prompt into your agent to connect SiDJI SEO
                     and install its SEO skills. It will guide you through any
                     manual steps.
                   </CardDescription>
@@ -159,7 +160,7 @@ function AiPage() {
                   </CardTitle>
                   <CardDescription>
                     Already connected? Paste the update prompt into your agent
-                    to get the latest OpenSEO skills while preserving your
+                    to get the latest SiDJI SEO skills while preserving your
                     connection settings and personal edits.
                   </CardDescription>
                 </CardHeader>
@@ -229,7 +230,7 @@ function AiPage() {
                     className="flex flex-col gap-0.5 sm:flex-row sm:gap-3"
                   >
                     <a
-                      href={`https://openseo.so/docs/skills/${name}`}
+                      href={`${REPOSITORY_URL}/tree/feat/sidji-seo-rebrand/plugins/openseo/skills/${name}`}
                       target="_blank"
                       rel="noreferrer"
                       className={`shrink-0 font-mono text-[13px] sm:w-48 ${LINK_CLASS}`}

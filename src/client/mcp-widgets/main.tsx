@@ -35,14 +35,14 @@ function Widget() {
   return (
     <main className="space-y-4 p-4">
       <header className="flex flex-wrap items-center justify-between gap-2 border-b border-border pb-3">
-        <span className="font-medium">OpenSEO</span>
+        <span className="font-medium">SiDJI SEO</span>
         {appUrl && (
           <Button
             variant="ghost"
             disabled={!host.isConnected || host.action.isPending}
             onClick={() => host.open(appUrl)}
           >
-            Open in OpenSEO
+            Open in SiDJI SEO
             <ExternalLink />
           </Button>
         )}
@@ -57,7 +57,7 @@ function Widget() {
       {!snapshot && !host.error ? (
         <div role="status" aria-busy="true" className="space-y-3">
           <span className="text-sm text-muted-foreground">
-            Loading OpenSEO results…
+            Loading SiDJI SEO results…
           </span>
           <Skeleton className="h-10" />
           <Skeleton className="h-24" />
@@ -68,7 +68,7 @@ function Widget() {
         <SerpWidget host={host} data={serp.data} />
       ) : snapshot ? (
         <p role="alert">
-          Could not read these results. Ask your assistant to run the OpenSEO
+          Could not read these results. Ask your assistant to run the SiDJI SEO
           tool again.
         </p>
       ) : null}

@@ -17,7 +17,7 @@ function DataforseoApiKeyHelpPage() {
       title="Set up your DataForSEO API key"
       intro={
         <>
-          OpenSEO needs the <code>DATAFORSEO_API_KEY</code> secret before
+          SiDJI SEO needs the <code>DATAFORSEO_API_KEY</code> secret before
           keyword, domain, and SEO data workflows can run.
         </>
       }

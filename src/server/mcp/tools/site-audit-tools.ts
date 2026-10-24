@@ -185,7 +185,7 @@ export const getAuditStatusTool = {
   config: {
     title: "Get site audit status",
     description:
-      "Check the progress of a site audit (phase, pages crawled, Lighthouse progress). Free — reads OpenSEO state and may reconcile a dead workflow by marking its audit failed. Omit auditId for the most recent audit.",
+      "Check the progress of a site audit (phase, pages crawled, Lighthouse progress). Free — reads SiDJI SEO state and may reconcile a dead workflow by marking its audit failed. Omit auditId for the most recent audit.",
     inputSchema: statusInputSchema,
     outputSchema: z
       .object({
@@ -282,7 +282,7 @@ export const getAuditIssuesTool = {
   config: {
     title: "Get site audit issues",
     description:
-      "Read the prioritized issue report from a completed site audit. Every issue carries a how_to_fix with concrete remediation steps an agent can act on. Free — reads OpenSEO state. Omit auditId for the most recent audit.",
+      "Read the prioritized issue report from a completed site audit. Every issue carries a how_to_fix with concrete remediation steps an agent can act on. Free — reads SiDJI SEO state. Omit auditId for the most recent audit.",
     inputSchema: issuesInputSchema,
     outputSchema: z
       .object({
@@ -467,7 +467,7 @@ export const getAuditPagesTool = {
   config: {
     title: "Get site audit pages",
     description:
-      "List crawled pages from a site audit with per-page SEO data (status, title, description, word count, indexability, crawl depth, link counts). Free — reads OpenSEO state. Omit auditId for the most recent audit.",
+      "List crawled pages from a site audit with per-page SEO data (status, title, description, word count, indexability, crawl depth, link counts). Free — reads SiDJI SEO state. Omit auditId for the most recent audit.",
     inputSchema: pagesInputSchema,
     outputSchema: z
       .object({
