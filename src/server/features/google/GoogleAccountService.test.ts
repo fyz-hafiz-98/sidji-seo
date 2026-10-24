@@ -1,6 +1,4 @@
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { readFileSync } from "node:fs";
 import { createClient, type Client } from "@libsql/client";
 import { drizzle } from "drizzle-orm/libsql";
 import {
@@ -26,12 +24,12 @@ vi.mock("@/server/features/dashboard/services/DashboardCacheService", () => ({
   DashboardCacheService: { deleteGscCache: oauth.deleteGscCache },
 }));
 let client: Client;
-const directory = mkdtempSync(join(tmpdir(), "google-account-removal-"));
 let service: typeof ServiceModule.GoogleAccountService;
 type Build = Parameters<typeof runBatch>[0];
 
 beforeAll(async () => {
-  client = createClient({ url: `file:${join(directory, "test.db")}` });
+  // These assertions exercise real SQL, without a disk-persistence contract.
+  client = createClient({ url: "file::memory:" });
   const testDb = drizzle(client);
   vi.doMock("@/db", () => ({ db: testDb }));
   vi.doMock("@/db/runBatch", () => ({
@@ -81,7 +79,6 @@ beforeAll(async () => {
 
 afterAll(() => {
   client.close();
-  rmSync(directory, { recursive: true });
 });
 beforeEach(async () => {
   oauth.getGoogleAccessToken.mockImplementation(
