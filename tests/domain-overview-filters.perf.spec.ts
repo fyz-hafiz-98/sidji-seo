@@ -54,9 +54,6 @@ test.describe("Domain Overview filter performance", () => {
 
     await installDomainPerfProbe(page);
     const client = await page.context().newCDPSession(page);
-    await client.send("Emulation.setCPUThrottlingRate", {
-      rate: CPU_THROTTLE_RATE,
-    });
 
     const checkpoints: PerfCheckpoint[] = [];
     let finalMetrics: DomainPerfMetrics | null = null;
@@ -75,6 +72,11 @@ test.describe("Domain Overview filter performance", () => {
     try {
       await openDomainOverview(page, "pages");
       await waitForDomainRows(page, "Top Pages");
+      // Measure the existing edit flow under throttling, after real startup.
+      // Cold dev-module loading is outside the metrics reset below.
+      await client.send("Emulation.setCPUThrottlingRate", {
+        rate: CPU_THROTTLE_RATE,
+      });
       await resetDomainPerfMetrics(page);
       await captureCheckpoint("ready on Top Pages");
 
