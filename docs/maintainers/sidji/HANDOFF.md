@@ -23,11 +23,16 @@ The built personal application was verified at http://127.0.0.1:3001 with all 60
 - Fork: <https://github.com/fyz-hafiz-98/sidji-seo>.
 - Branch: `feat/sidji-seo-rebrand`.
 - Baseline/default branch: `c5f8db19c7ca9e750836b6ed5c8a6491d4f967f4`.
-- Publication verification is recorded below after push.
+- Draft PR: <https://github.com/fyz-hafiz-98/sidji-seo/pull/1>, targeting this fork's `main`, not upstream.
+- First published source/validation checkpoint: `2353e7b8476929f65af685732a9fbb852886d488`. GitHub API confirmed the remote branch SHA exactly matched local HEAD after a normal, non-force push. Subsequent handoff-only commits are included in the same PR; use its latest head or `git rev-parse HEAD` for the delivered revision.
 - Default branch is not automatically merged. This is an existing fork, and [AGENTS.md](../../../AGENTS.md) requires explicit maintainer review for skill-source and workflow changes.
 - Plugin version remains `1.0.23`; changes adapt identity/configuration rather than adding tools or substantive public workflows. Twelve public skills are synchronized using the existing generator.
 
 Setup links currently reference the review branch because the guide is not on the unmerged default branch. If that branch is deleted after merge, update the shared setup-guide URL and skill source links to the merged default branch first.
+
+Install the plugin from this review branch or its local directory until merge: `main` still carries the upstream hosted plugin. The final rebuilt app's Copy setup prompt action was checked for both the exact review-branch source and its own loopback MCP. The setup prompt, guide and plugin README all make this branch requirement explicit.
+
+GitHub CI started on PR creation; its `ci` and Docker build jobs were still running at the publication checkpoint. The inherited PR Preview job was skipped by its existing fork guard. These remote jobs are distinct from the completed local checks; no remote deployment was requested or enabled. Their latest status is visible on the PR and is not claimed as PASS here.
 
 ## Owner configuration
 
