@@ -60,6 +60,15 @@ for (const path of [
 ])
   assert.equal(readJson(path).name, "SiDJI SEO");
 const pkg = readJson("package.json");
+const website = readJson("web/package.json");
+for (const name of ["deploy", "deploy:prod", "deploy:preview"]) {
+  assert.ok(
+    website.scripts[name].startsWith(
+      "node ../scripts/remote-operation-guard.mjs && ",
+    ),
+    `website ${name} must be guarded`,
+  );
+}
 for (const name of [
   "deploy",
   "deploy:selfhost",
