@@ -238,13 +238,13 @@ export async function switchDomainTab(page: Page, tab: DomainTab) {
 
 export async function openFilters(page: Page) {
   await page.getByRole("button", { name: /Filters/ }).click();
-  await expect(page.getByText("Refine table results")).toBeVisible();
+  await expect(page.getByText("Refine results", { exact: true })).toBeVisible();
   await expectPageResponsive(page, "after opening filters");
 }
 
 export async function closeFilters(page: Page) {
   await page.getByRole("button", { name: /Filters/ }).click();
-  await expect(page.getByText("Refine table results")).toBeHidden();
+  await expect(page.getByText("Refine results", { exact: true })).toBeHidden();
   await expectPageResponsive(page, "after closing filters");
 }
 
