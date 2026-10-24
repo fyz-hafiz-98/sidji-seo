@@ -1,4 +1,9 @@
 import { expect, test, type Page } from "@playwright/test";
+import { installLocalSetupHandler } from "./local-setup-test-utils";
+
+test.beforeEach(async ({ page }) => {
+  await installLocalSetupHandler(page);
+});
 
 async function getProjectId(page: Page) {
   await page.goto("/");

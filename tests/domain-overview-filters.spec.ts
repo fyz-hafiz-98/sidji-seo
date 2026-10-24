@@ -1,4 +1,9 @@
 import { expect, test } from "@playwright/test";
+import { installLocalSetupHandler } from "./local-setup-test-utils";
+
+test.beforeEach(async ({ page }) => {
+  await installLocalSetupHandler(page);
+});
 import {
   applyFilters,
   ensureFiltersOpen,

@@ -1,18 +1,13 @@
 import { expect, test, type Page } from "@playwright/test";
 import { z } from "zod";
+import { installLocalSetupHandler } from "./local-setup-test-utils";
 
 async function openLocal(page: Page, path: string) {
   await page.goto(path);
-  const dismiss = page.getByRole("button", { name: "Dismiss", exact: true });
-  try {
-    await dismiss.waitFor({ state: "visible", timeout: 2_000 });
-    await dismiss.click();
-  } catch {
-    // The help page deliberately does not show the missing-key modal.
-  }
 }
 
 test.beforeEach(async ({ page }) => {
+  await installLocalSetupHandler(page);
   // Browser checks cannot contact hosted services, analytics or providers.
   await page.route("**/*", (route) => {
     const host = new URL(route.request().url()).hostname;
