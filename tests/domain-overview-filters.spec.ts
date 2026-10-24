@@ -1,9 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { installLocalSetupHandler } from "./local-setup-test-utils";
 
-test.beforeEach(async ({ page }) => {
-  await installLocalSetupHandler(page);
-});
 import {
   applyFilters,
   ensureFiltersOpen,
@@ -15,6 +12,10 @@ import {
   switchDomainTab,
   typeIntoDraftInput,
 } from "./domain-overview-test-utils";
+
+test.beforeEach(async ({ page }) => {
+  await installLocalSetupHandler(page);
+});
 
 test.describe("Domain Overview filters", () => {
   test("closing an inactive search tab does not select it", async ({

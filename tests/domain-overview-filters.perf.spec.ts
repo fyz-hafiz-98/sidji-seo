@@ -1,9 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { installLocalSetupHandler } from "./local-setup-test-utils";
 
-test.beforeEach(async ({ page }) => {
-  await installLocalSetupHandler(page);
-});
 import {
   attachDomainPerfMetrics,
   attachJsonArtifact,
@@ -21,6 +18,10 @@ import {
   typeIntoDraftInput,
   waitForDomainRows,
 } from "./domain-overview-test-utils";
+
+test.beforeEach(async ({ page }) => {
+  await installLocalSetupHandler(page);
+});
 
 const CPU_THROTTLE_RATE = Number(process.env.DOMAIN_FILTER_CPU_THROTTLE ?? 6);
 const PERF_BUDGETS = {
