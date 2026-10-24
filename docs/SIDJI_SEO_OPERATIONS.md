@@ -36,6 +36,8 @@ Resolve conflicts while preserving the brand module, local MCP endpoint, local i
 
 The implementation baseline is `c5f8db19c7ca9e750836b6ed5c8a6491d4f967f4`. Record the exact validated SiDJI commit from the handoff or `git log` before upgrading. For application-only rollback, stop the app and use a separate checkout of the known commit (or rebuild that commit's local image), keeping the correct existing data mount/configuration. Revert unwanted changes through normal commits/PRs; do not reset or force-push shared history.
 
+The raw upstream baseline is a provenance reference, not a verified runnable rollback target: its original browser needs the minimal server-boundary repair described in the audit. Prefer the validated SiDJI application revision when restoring a working installation.
+
 `git revert` changes application code, **not database state**. If an update introduced incompatible migrations, restore the matching verified cold backup into a separate instance and verify it before switching. This rebrand introduces no schema migration and preserves all persistent identifiers. Never mix old code with a newer schema without checking compatibility.
 
 Remote hosting is outside this setup. Any future deployment needs owned resources, HTTPS, real authentication (for example Cloudflare Access), reviewed workflows and explicit authorization. Host allowlists, CORS and a secret URL do not provide authentication.

@@ -23,6 +23,8 @@ Keyword research and saved keywords; competitor/domain research; backlinks; rank
 
 Without keys, the app shows configuration-required/disconnected states. Local checks do not imply that live research, Google OAuth, AI generation or paid scheduling has been tested. Sharing retains the upstream hosted-only restrictions.
 
+The inherited filter-performance budget under 6× CPU throttling also fails on the baseline application on this machine. It remains a failing check; see the validation record for the exact functional results and limitations.
+
 ## Personal setup
 
 - [Setup, environment, local MCP and custom Docker build](docs/SIDJI_SEO_SETUP.md)

@@ -15,6 +15,17 @@ corepack pnpm exec vite dev --host 127.0.0.1 --strictPort
 
 Open [the local app](http://127.0.0.1:3001). Keep `AUTH_MODE=local_noauth` limited to your trusted machine. Stop with Ctrl+C. Vite startup does not emit scheduled cron events; do not run the self-host scheduler during no-cost validation.
 
+The first cold launch on the tested Windows machine took about five minutes while Vite prepared dependencies. Wait for the terminal's ready message and a successful health response before opening automated browser checks.
+
+The built application was also verified using this native production-bundle path:
+
+```powershell
+corepack pnpm run build
+corepack pnpm exec vite preview --host 127.0.0.1 --port 3001 --strictPort
+```
+
+The delivered checkout already has a successful build. Stop preview with Ctrl+C. Rebuild after changing source or configuration so the bundle and generated worker bindings reflect the current setup. Local preview is not a public deployment.
+
 Production bundle and checks:
 
 ```powershell
