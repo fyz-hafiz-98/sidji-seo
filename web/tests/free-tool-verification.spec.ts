@@ -32,8 +32,11 @@ test.beforeEach(async ({ page }) => {
   );
   // Never call the paid provider endpoints from these browser tests.
   await page.route("**/api/**", (route) => {
+    const path = new URL(route.request().url()).pathname;
+    // Vite serves route modules under /src/routes/api/ during development.
+    if (!path.startsWith("/api/")) return route.fallback();
     requests.push({
-      path: new URL(route.request().url()).pathname,
+      path,
       token: route.request().postDataJSON()?.turnstileToken,
     });
     return route.fulfill({ status: 503, json: { error: "Test response" } });
