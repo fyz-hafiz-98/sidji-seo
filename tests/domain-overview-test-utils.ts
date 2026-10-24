@@ -200,18 +200,10 @@ export async function openDomainOverview(page: Page, tab: DomainTab) {
   await expect(
     page.getByRole("heading", { name: "Domain Overview" }),
   ).toBeVisible();
-  await dismissSetupModal(page);
   await expect(page.getByRole("button", { name: /Filters/ })).toBeVisible({
     timeout: 30_000,
   });
   await expectPageResponsive(page, "after opening Domain Overview");
-}
-
-async function dismissSetupModal(page: Page) {
-  const dismissButton = page.getByRole("button", { name: "Dismiss" });
-  if (await dismissButton.isVisible()) {
-    await dismissButton.click();
-  }
 }
 
 export async function waitForDomainRows(page: Page, label: string) {
