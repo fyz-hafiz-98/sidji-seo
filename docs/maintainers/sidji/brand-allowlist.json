@@ -158,5 +158,10 @@
     "path": "^plugins/openseo/\\.cursor-plugin/plugin\\.json$",
     "pattern": "raw\\.githubusercontent\\.com/fyz-hafiz-98/sidji-seo/",
     "reason": "Non-text icon from this fork; compatibility source folder retained."
+  },
+  {
+    "path": "^web/src/routes/_marketing\\.tsx$",
+    "pattern": "Upstream OpenSEO on GitHub",
+    "reason": "Explicit attribution of the historical upstream star count; not a SiDJI achievement."
   }
 ]

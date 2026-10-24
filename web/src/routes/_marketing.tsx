@@ -69,7 +69,7 @@ function getMobileNavItems(githubStarCount: string) {
       label: "Community",
       links: [
         {
-          label: `GitHub ${githubStarCount}`,
+          label: `Upstream GitHub ${githubStarCount}`,
           href: "https://github.com/every-app/open-seo",
         },
       ],
@@ -212,12 +212,12 @@ function MarketingLayout() {
                 href="https://github.com/every-app/open-seo"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`GitHub, ${githubStarCount} stars`}
+                aria-label={`Upstream OpenSEO on GitHub, ${githubStarCount} stars`}
                 className="group hidden h-9 items-center gap-1.5 px-2 text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 md:inline-flex"
               >
                 <GitHubIcon size={16} />
                 <span className="text-neutral-500 transition-colors group-hover:text-neutral-900">
-                  {githubStarCount}
+                  Upstream {githubStarCount}
                 </span>
               </a>
               <a

@@ -8,7 +8,7 @@ Use Node.js 22 or 24 and Corepack. The repository declares pnpm `10.30.1`; `core
 
 ```powershell
 corepack pnpm install --frozen-lockfile
-Copy-Item .env.example .env.local
+if (!(Test-Path .env.local)) { Copy-Item .env.example .env.local }
 corepack pnpm run db:migrate:local
 corepack pnpm exec vite dev --host 127.0.0.1 --strictPort
 ```
@@ -72,7 +72,7 @@ A cloud client cannot reach this laptop's loopback address. Remote connection is
 Docker is optional. Do not install or alter Docker Desktop, WSL, firewall or OS settings just for this guide.
 
 ```powershell
-Copy-Item .env.example .env
+if (!(Test-Path .env)) { Copy-Item .env.example .env }
 docker compose build
 docker compose up -d --no-build
 docker compose ps

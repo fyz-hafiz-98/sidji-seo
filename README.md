@@ -10,7 +10,7 @@ Use Node.js 22/24 and the declared pnpm 10.30.1 through Corepack:
 
 ```powershell
 corepack pnpm install --frozen-lockfile
-Copy-Item .env.example .env.local
+if (!(Test-Path .env.local)) { Copy-Item .env.example .env.local }
 corepack pnpm run db:migrate:local
 corepack pnpm exec vite dev --host 127.0.0.1 --strictPort
 ```

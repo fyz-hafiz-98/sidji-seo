@@ -32,3 +32,11 @@ React 19, TanStack Start/Router/Query, Vite 7, TypeScript, Tailwind/Base UI. pnp
 Upstream `AGENTS.md` requires explicit maintainer review for `.agents/skills/**` changes. Rebranding setup/public skills therefore ships on a reviewable fork branch/PR rather than being automatically merged. No instruction files, CODEOWNERS, or review protections are altered.
 
 Actual checks, failures, and limitations are recorded in [VALIDATION.md](VALIDATION.md).
+
+## Minimal baseline repairs
+
+The original checkout's browser failed on the report routes: named handler exports retained `cloudflare:workers` and database imports in the client graph even though the routes had no component. The three handlers are explicitly wrapped with `createServerOnlyFn`, preserving their signatures, authorization, response headers and policies. This follows the existing stack's [environment boundary](https://tanstack.com/start/latest/docs/framework/react/guide/environment-functions); no alias or mock for Workers APIs is shipped to the browser.
+
+The unmodified baseline remains recorded as a runtime failure. For the visual control, the same three boundary wrappers are applied to the detached baseline, with its original OpenSEO UI unchanged. The exact patch is retained locally in `.logs/baseline-runtime.patch`. The repaired control produced twenty captures with zero browser page errors and zero document overflow. It is not described as an unmodified baseline runtime pass.
+
+Windows-only test harness issues were also reproduced before branding: `bash` selected the WSL launcher, and Google SQL tests could not delete their open/closing SQLite fixture files. The shell harness resolves Git's existing Bash on Windows. The Google tests use the repository's established per-client in-memory SQLite pattern because they assert SQL constraints/upserts/migration behavior, not disk persistence. All assertions and the production SQLite/D1 backend remain intact. No OS/WSL setup is changed.
