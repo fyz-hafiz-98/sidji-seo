@@ -3,11 +3,11 @@ name: link-prospecting
 description: Find link prospects, discover contact paths, and draft outreach from SERPs and backlink signals.
 ---
 
-# OpenSEO Link Prospecting
+# SiDJI SEO Link Prospecting
 
 ## Goal
 
-Find realistic pages, sites, and authors that might reference the user's page, product, study, guide, or tool. Use OpenSEO for prospect discovery, then use available web/search/browser tools for contact discovery.
+Find realistic pages, sites, and authors that might reference the user's page, product, study, guide, or tool. Use SiDJI SEO for prospect discovery, then use available web/search/browser tools for contact discovery.
 
 ## Required inputs
 
@@ -30,7 +30,7 @@ The project-context tools are free and shared with the app and other agents.
 
 Deliver through the `seo-report` skill, saving with `skill: "link-prospecting"`. If that skill is not available, say so and stop before writing HTML.
 
-## OpenSEO MCP tools
+## SiDJI SEO MCP tools
 
 - `get_serp_results`: find ranking articles, listicles, resource pages, comparisons, and topical publishers.
 - `get_backlinks_overview`: inspect competitor domain or page backlink/referring-domain patterns.
@@ -41,7 +41,7 @@ Deliver through the `seo-report` skill, saving with `skill: "link-prospecting"`.
 
 ## Contact discovery tools
 
-After OpenSEO identifies good prospects, use available non-OpenSEO browsing or search tools for public contact discovery. Depending on the client, this may be web search, page fetches, browser automation, or a search API.
+After SiDJI SEO identifies good prospects, use available non-SiDJI SEO browsing or search tools for public contact discovery. Depending on the client, this may be web search, page fetches, browser automation, or a search API.
 
 Look for:
 
@@ -106,12 +106,12 @@ Sections in this order:
 4. **Outreach drafts** — the message text for each of two or three reusable angles: resource or list inclusion, an article update, and a comparison mention.
 5. **Limitations** — notes: contact paths not found, prospects that are direct competitors or likely paid placements, and which source found each contact detail.
 6. **What to do next** — an ordered list: who to send to first, and in what order.
-7. **How this report was made** — opens with the skill link line from `seo-report`, pointing at `https://openseo.so/docs/skills/link-prospecting` ("OpenSEO Link Prospecting skill"), then which tools returned prospects and which came from the web or the browser.
+7. **How this report was made** — opens with the skill link line from `seo-report`, pointing at `https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo/skills/link-prospecting` ("SiDJI SEO Link Prospecting skill"), then which tools returned prospects and which came from the web or the browser.
 
 ## Guardrails
 
 - Do not invent email addresses, social handles, or contact names.
-- Do not say OpenSEO found contact details unless an OpenSEO tool returned them. Attribute contact discovery to the web/search/browser source used.
+- Do not say SiDJI SEO found contact details unless a SiDJI SEO tool returned them. Attribute contact discovery to the web/search/browser source used.
 - If contact details are not available after a reasonable search, recommend specific discovery steps such as checking the author page, contact page, LinkedIn, X, or a reputable contact-enrichment tool.
 - Avoid spammy mass outreach. Personalize by page and reason.
 - Flag prospects that are direct competitors or likely paid placements.

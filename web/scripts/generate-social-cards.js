@@ -62,7 +62,7 @@ function card(title) {
       h(
         "div",
         { style: { fontSize: 34, fontWeight: 600, letterSpacing: -1 } },
-        "OpenSEO",
+        "SiDJI SEO",
       ),
     ),
     h(
@@ -100,7 +100,7 @@ function card(title) {
           color: "#65716b",
         },
       },
-      "openseo.so",
+      "SiDJI SEO",
     ),
   );
 }

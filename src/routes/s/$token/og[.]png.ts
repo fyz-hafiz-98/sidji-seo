@@ -28,7 +28,7 @@ export async function handleReportSocialImage(
     return new Response(null, {
       status: 302,
       headers: {
-        Location: "https://openseo.so/social-card.jpg",
+        Location: "/android-chrome-512x512.png",
         "Cache-Control": "no-store",
         "Referrer-Policy": "no-referrer",
         "X-Robots-Tag": "noindex, nofollow",

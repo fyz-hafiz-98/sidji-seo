@@ -266,7 +266,7 @@ export class SamChatAgent extends Think {
     return withPgClient(async () => {
       const ctx = await this.loadSamContext();
       if (!ctx) {
-        return "You are SAM, the SEO agent inside OpenSEO. This chat session no longer exists; tell the user to start a new chat.";
+        return "You are SAM, the SEO agent inside SiDJI SEO. This chat session no longer exists; tell the user to start a new chat.";
       }
       const context = await ProjectContextService.getProjectContext(
         ctx.project.id,
@@ -349,7 +349,7 @@ export class SamChatAgent extends Think {
 
       const baseUrl =
         (await this.ctx.storage.get<string>(PUBLIC_ORIGIN_KEY)) ??
-        "https://app.openseo.so";
+        "http://127.0.0.1:3001";
       // Delegated/self-host orgs have no member rows — implicit owner. In
       // hosted mode a missing member row means the user was removed from the
       // workspace; fail closed instead of letting the open socket keep

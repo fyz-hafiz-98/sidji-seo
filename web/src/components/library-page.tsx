@@ -94,7 +94,7 @@ function LibrarySpokeCta({ library }: { library: LibraryRef }) {
       </p>
       <div className="mt-5 flex flex-col gap-3 sm:flex-row">
         <a
-          href="https://app.openseo.so/sign-up"
+          href="http://127.0.0.1:3001"
           className="inline-flex h-10 items-center justify-center rounded-lg bg-neutral-950 px-4 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
         >
           Start with OpenSEO

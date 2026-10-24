@@ -1,4 +1,5 @@
 import { Link, useLocation, useMatchRoute } from "@tanstack/react-router";
+import { BRAND_NAME } from "@/shared/brand";
 import type { LinkOptions } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useState, type ComponentType } from "react";
@@ -145,7 +146,7 @@ export function Sidebar({
           onClick={() => setOpenMobile(false)}
           className="px-1 pb-2 text-base font-semibold text-sidebar-foreground"
         >
-          OpenSEO
+          {BRAND_NAME}
         </Link>
         <ProjectSwitcher
           activeProjectId={projectId}

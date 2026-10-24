@@ -15,7 +15,7 @@ export function SiteFooter({ className }: { className?: string }) {
   return (
     <div className={className}>
       <Link to="/" className="text-sm font-semibold text-neutral-900">
-        OpenSEO
+        SiDJI SEO
       </Link>
 
       <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-[repeat(auto-fit,minmax(9rem,1fr))]">
@@ -35,7 +35,7 @@ export function SiteFooter({ className }: { className?: string }) {
           <div>
             <p className="font-semibold text-neutral-900">AI agents</p>
             <div className="mt-2 flex flex-col gap-1.5">
-              <Link to="/features/mcp">OpenSEO MCP</Link>
+              <Link to="/features/mcp">SiDJI SEO MCP</Link>
               <Link to="/google-search-console-mcp">
                 Google Search Console MCP
               </Link>

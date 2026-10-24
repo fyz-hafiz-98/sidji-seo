@@ -64,7 +64,7 @@ export function AnalyticsOnboardingStep({
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-semibold tracking-tight">
-          Help make OpenSEO better
+          Help make SiDJI SEO better
         </h1>
         <p className="mt-3 text-sm text-muted-foreground">
           You can change these anytime in Settings. See our{" "}
@@ -83,7 +83,7 @@ export function AnalyticsOnboardingStep({
         <div>
           <p className="text-sm">Usage analytics</p>
           <p className="mt-1 text-sm text-muted-foreground">
-            Share usage analytics and session replays to help improve OpenSEO.
+            Share usage analytics and session replays to help improve SiDJI SEO.
           </p>
         </div>
         <Switch

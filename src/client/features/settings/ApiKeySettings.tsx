@@ -49,7 +49,7 @@ export function ApiKeySettings() {
 
   const mcpUrl =
     typeof window === "undefined"
-      ? "https://app.openseo.so/mcp"
+      ? "http://127.0.0.1:3001/mcp"
       : `${window.location.origin}/mcp`;
 
   const apiKeysQuery = useQuery({

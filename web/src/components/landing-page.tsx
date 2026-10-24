@@ -19,7 +19,7 @@ import { featurePages } from "@/lib/feature-pages";
 import { getAgentSetupPrompt } from "../../../src/client/features/ai-mcp/agentSetupPrompt";
 import "./landing-page.css";
 
-export const SIGNUP_URL = "https://app.openseo.so/sign-up";
+export const SIGNUP_URL = "http://127.0.0.1:3001";
 export const PRODUCT_HUNT_URL =
   "https://www.producthunt.com/products/openseo?launch=openseo";
 const GITHUB_URL = "https://github.com/every-app/open-seo";
@@ -512,7 +512,7 @@ export function SkillsList() {
   );
 }
 
-const SETUP_PROMPT = getAgentSetupPrompt("https://app.openseo.so");
+const SETUP_PROMPT = getAgentSetupPrompt("http://127.0.0.1:3001");
 
 export function CopySetupPrompt({ size = "md" }: { size?: "md" | "lg" }) {
   const [toast, setToast] = useState<string | null>(null);

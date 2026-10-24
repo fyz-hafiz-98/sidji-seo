@@ -30,7 +30,7 @@ export function googleAuthErrorCopy(
     case "scope_not_granted":
       return {
         title: `${what} is missing a permission`,
-        description: `OpenSEO didn't get access to your ${providerLabel ?? "Google"} data because a box on Google's permission screen wasn't checked. Try again and check every box before you continue.`,
+        description: `SiDJI SEO didn't get access to your ${providerLabel ?? "Google"} data because a box on Google's permission screen wasn't checked. Try again and check every box before you continue.`,
       };
     case "connection_save_failed":
       return {

@@ -36,7 +36,7 @@ export const setupSteps: {
   {
     id: "mcp",
     label: "Connect your AI agent",
-    detail: "Use OpenSEO inside Claude or your favorite agent.",
+    detail: "Use SiDJI SEO inside Claude or your favorite agent.",
     icon: Bot,
   },
   {

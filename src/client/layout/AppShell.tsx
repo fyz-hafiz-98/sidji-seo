@@ -1,4 +1,5 @@
 import * as React from "react";
+import { BRAND_NAME } from "@/shared/brand";
 import { projectsQueryOptions } from "@/client/features/projects/projectQueries";
 import { Link, useLocation } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
@@ -142,7 +143,7 @@ function MobileTopBar() {
     <div className="flex shrink-0 items-center gap-1 border-b border-border bg-card px-2 py-1.5 md:hidden">
       <SidebarTrigger aria-label="Toggle sidebar" />
       <Link to="/" className="ml-1 font-semibold text-foreground">
-        OpenSEO
+        {BRAND_NAME}
       </Link>
     </div>
   );

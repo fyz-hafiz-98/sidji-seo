@@ -22,6 +22,7 @@ import {
 import { z } from "zod";
 import {
   createMcpToolContext,
+  MCP_AUTH_CONTEXT_PROP,
   type McpProps,
   type ToolContext,
 } from "@/server/mcp/context";
@@ -117,6 +118,7 @@ import {
   showSearchConsolePerformanceTool,
   showSerpResultsTool,
 } from "@/server/mcp/tools/widget-tools";
+import { BRAND_NAME } from "@/shared/brand";
 
 type ToolSchema = z.ZodType | z.ZodRawShape;
 
@@ -196,15 +198,18 @@ export function createOpenSeoMcpServer(
 ) {
   const server = new McpServer(
     {
-      name: "OpenSEO MCP",
-      title: "OpenSEO",
+      name: `${BRAND_NAME} MCP`,
+      title: BRAND_NAME,
       version: "0.0.12",
       description:
         "SEO research tools for AI agents: keyword research and metrics, SERP and local SERP results, domain and backlink analysis, rank tracking, and Google Search Console performance.",
-      websiteUrl: "https://openseo.so",
+      websiteUrl: authProps[MCP_AUTH_CONTEXT_PROP].baseUrl,
       icons: [
         {
-          src: "https://openseo.so/android-chrome-512x512.png",
+          src: new URL(
+            "/android-chrome-512x512.png",
+            authProps[MCP_AUTH_CONTEXT_PROP].baseUrl,
+          ).href,
           mimeType: "image/png",
           sizes: ["512x512"],
         },
@@ -221,7 +226,7 @@ export function createOpenSeoMcpServer(
         (supportsApps
           ? "Research tools return data without opening UI. When an interactive view would help the user inspect Search Console or SERP results, optionally call show_search_console_performance or show_serp_results with the resultId already returned. Do not copy result rows or fetch them again just to display them. Use show_search_console_performance for the Google connection prompt when needed. Do not show a widget for every intermediate research call. "
           : "") +
-        "OpenSEO research tools use credits. Proceed with normal focused research, but ask the user for confirmation before planned batches over 2,000 credits. OpenSEO cannot purchase credits or charge cards. Explain unsupported purchase requests without promoting subscriptions, upgrades or credit purchases. When a tool reports that the organization is out of credits, you may share the billing link from that error as a plain link.",
+        "SiDJI SEO research tools use credits. Proceed with normal focused research, but ask the user for confirmation before planned batches over 2,000 credits. SiDJI SEO cannot purchase credits or charge cards. Explain unsupported purchase requests without promoting subscriptions, upgrades or credit purchases. When a tool reports that the organization is out of credits, you may share the billing link from that error as a plain link.",
     },
   );
 

@@ -3,7 +3,7 @@ name: local-seo
 description: "Audit a Google Business Profile, compare it to local competitors, and map Maps visibility around a location."
 ---
 
-# OpenSEO Local SEO
+# SiDJI SEO Local SEO
 
 ## Goal
 
@@ -31,7 +31,7 @@ The project-context tools are free and shared with the app and other agents.
 
 Deliver through the `seo-report` skill, saving with `skill: "local-seo"`. If that skill is not available, say so and stop before writing HTML.
 
-## OpenSEO MCP tools
+## SiDJI SEO MCP tools
 
 - `search_local_businesses`: nearby listings, filterable by `minRating`, `minReviews`, and `isClaimed` — use `isClaimed: false` to find unclaimed listings when prospecting. One call with the brand name as `query` and a wide radius returns category, rating, review count, claimed status, coordinates, and `cid` for every location of a chain — usually enough that per-location `get_business_profile` calls are unnecessary.
 - `get_local_serp_results`: the Maps/Local Finder result set near a coordinate. The rows carry `cid` and `place_id` — collect them once and reuse them everywhere below.
@@ -74,7 +74,7 @@ Sections in this order:
 4. **Maps coverage** — what the grid shows, where visibility drops off, and who wins there. A bar chart of ranks by direction reads faster than a paragraph; label every value.
 5. **Q&A and posting** — only when the basics are already competitive.
 6. **What to do next** — an ordered list.
-7. **How this report was made** — opens with the skill link line from `seo-report`, pointing at `https://openseo.so/docs/skills/local-seo` ("OpenSEO Local SEO skill"), then which tools returned what, plus a note reading each missing grid rank against that point's `resultsCount` rather than calling it invisibility.
+7. **How this report was made** — opens with the skill link line from `seo-report`, pointing at `https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo/skills/local-seo` ("SiDJI SEO Local SEO skill"), then which tools returned what, plus a note reading each missing grid rank against that point's `resultsCount` rather than calling it invisibility.
 
 ## Guardrails
 

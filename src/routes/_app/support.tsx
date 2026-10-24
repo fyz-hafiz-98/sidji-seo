@@ -11,7 +11,7 @@ import {
 import { SUPPORT_EMAIL } from "@/client/lib/support";
 
 const DISCORD_URL = "https://discord.gg/c9uGs3cFXr";
-const GITHUB_URL = "https://github.com/every-app/open-seo";
+const GITHUB_URL = "https://github.com/fyz-hafiz-98/sidji-seo";
 
 export const Route = createFileRoute("/_app/support")({
   component: SupportPage,
@@ -27,7 +27,7 @@ function SupportPage() {
           </p>
           <PageHeader
             title="We want to hear from you"
-            description="We want to talk to you! We're super open to feedback and want to learn how you work so we can make OpenSEO better."
+            description="Personal setup and maintenance for SiDJI SEO. Community contacts below belong to upstream OpenSEO."
           />
         </div>
 
@@ -35,10 +35,10 @@ function SupportPage() {
           <Card>
             <CardHeader>
               <CardTitle>
-                <h2>Email</h2>
+                <h2>Upstream email</h2>
               </CardTitle>
               <CardDescription>
-                Send ideas, problems, questions, or feedback directly.
+                OpenSEO's contact. Use the fork's GitHub Issues for SiDJI SEO.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -53,8 +53,8 @@ function SupportPage() {
 
           <SupportLinkCard
             href={DISCORD_URL}
-            title="Discord"
-            description="Ask for help, share ideas and learn from the community."
+            title="Upstream Discord"
+            description="OpenSEO's community for upstream discussions."
             cta="Join the Discord"
           />
 

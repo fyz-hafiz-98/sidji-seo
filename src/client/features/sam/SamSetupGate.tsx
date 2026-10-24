@@ -21,10 +21,10 @@ export function SamSetupGate({
       description={
         <>
           <p>
-            SAM, OpenSEO&apos;s in-app AI agent, needs an OpenRouter API key.
+            SAM, SiDJI SEO&apos;s in-app AI agent, needs an OpenRouter API key.
             Create a key on OpenRouter, set it as the{" "}
-            <code>OPENROUTER_API_KEY</code> environment variable, restart
-            OpenSEO, then confirm here.
+            <code>OPENROUTER_API_KEY</code> environment variable, restart SiDJI
+            SEO, then confirm here.
           </p>
           <p className="text-xs">
             Step-by-step instructions for every deployment are in the{" "}

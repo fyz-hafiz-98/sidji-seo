@@ -3,7 +3,7 @@ name: seo-audit
 description: "Audit a website, investigate its real search opportunities, and deliver a short data-backed report on the few changes most likely to grow organic traffic that converts."
 ---
 
-# OpenSEO SEO Audit
+# SiDJI SEO SEO Audit
 
 ## Goal
 
@@ -20,9 +20,9 @@ Use this when asked for an SEO audit or review of a domain, especially for a sha
 
 Deliver through the `seo-report` skill, saving with `skill: "seo-audit"`. If that skill is unavailable, say so and stop before writing HTML.
 
-## OpenSEO MCP tools
+## SiDJI SEO MCP tools
 
-- `whoami`: confirm the connection and credits before spending. If OpenSEO is not connected, stop and ask the user to connect it.
+- `whoami`: confirm the connection and credits before spending. If SiDJI SEO is not connected, stop and ask the user to connect it.
 - `run_site_audit`, then `get_audit_status` (wait a minute or two between checks), `get_audit_issues`, `get_audit_pages`. Leave Lighthouse off unless the user asked for performance depth. Crawl reads are free.
 - `get_backlinks_overview` and `get_domain_overview`: orientation only. Provider traffic and keyword counts are estimates with no single observation date; they are not measured visits.
 - `get_ranked_keywords`: which queries send which pages traffic. Start with one domain-level call with `resultTypes: ["organic"]`; use `scope: "exact_url"` for the specific pages you compare. A page missing from a limited domain sample is not proof it has no rankings. Ranking rows carry their own `last_updated_time`; keyword metric dates are not ranking dates.
@@ -97,7 +97,7 @@ Use the title conventions in `seo-report`. Sections, in order:
    - **Why**: two to four bullets. The observed gap, who searches and why they matter, the plausible benefit, the main uncertainty. Benefit and confidence stay together.
    - A small evidence table (demand and current visibility, or stronger-versus-weaker sibling, or observed content versus proposed). Make the table explain itself: put geography and date in the column header, write positions as "#10 (page 1)" or "not in the first 20 results" (never "10/17", arrows, or listing counts), and say "estimated" in the volume header. Add a "How to read this" bullet only for a limit the headers cannot carry. Optionally a two-row scenario table labeled hypothetical.
 3. **What else we checked**: one table: Opportunity | What we found | Decision. One row per shortlist row that did not become a recommendation, starting with the runner-up and its sentence from step 4, plus one row grouping maintenance. Keep cells to a line.
-4. **How this report was made**: the fixed skill link line from `seo-report` (URL `https://openseo.so/docs/skills/seo-audit`, text "OpenSEO SEO Audit skill"), a two-line coverage and limits note, then a `<details><summary>Evidence and methodology</summary>` block, closed by default, holding the crawl sample, page families read, the full live-check table (query, volume, position, organic listings returned, time), calculations, and sources. Keep it self-contained; local file paths are not evidence.
+4. **How this report was made**: the fixed skill link line from `seo-report` (URL `https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo/skills/seo-audit`, text "SiDJI SEO SEO Audit skill"), a two-line coverage and limits note, then a `<details><summary>Evidence and methodology</summary>` block, closed by default, holding the crawl sample, page families read, the full live-check table (query, volume, position, organic listings returned, time), calculations, and sources. Keep it self-contained; local file paths are not evidence.
 
 Writing rules: short bullets, one idea each, usually 8–20 words. No Problem / Change / Expected effect paragraphs and no repeated summaries. There is no word target; if the main body outgrows about two screens, move supporting detail into the disclosure instead of deleting it. If the research establishes no worthwhile action, say what is working and what the audit could not establish rather than filling the format.
 

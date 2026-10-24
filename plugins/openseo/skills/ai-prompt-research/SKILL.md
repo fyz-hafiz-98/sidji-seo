@@ -21,7 +21,7 @@ The project-context tools are free and shared with the app and other agents.
 4. Check the research log for prompt research under 30 days old on the same keywords. Reuse it instead of paying again unless the user asks for fresh data.
 5. On finish, append one line with `update_project_context`: `{ updates: [{ appendResearchLog: { summary: "AI prompt research: <keywords>. Verdict: <conclusion>" } }] }`.
 
-## OpenSEO MCP tools
+## SiDJI SEO MCP tools
 
 - `research_ai_visibility_prompts`: questions about one keyword, matched in questions and answers and kept only when a model judges they use the keyword in the business's sense (from the project's business overview), with near-duplicates merged and the most common first. Niche keywords may return few prompts. Each prompt has cited `sources` (with `own` marked), `ownDomainCited`, `brandMentioned` and `tracked`. One prompt search and one relevance check per keyword, cached for 24 hours. US English only. Requires a paid plan in hosted mode.
 - `explore_prompt`: optional. Asks ChatGPT one prompt through its API and returns today's answer, citations, a `brandMentioned` flag for `highlightBrand`, and `fanOutQueries`, the web searches the model ran before answering. Charged at actual usage per uncached answer; cached answers are free for seven days. Requires a paid plan in hosted mode.
@@ -82,13 +82,13 @@ Deliver through the `seo-report` skill, saving with `skill: "ai-prompt-research"
 2. **Openings**: one `h3` per leading opening with representative prompts, the brand's presence, and the cited domains with their source type.
 3. **All prompt groups**: one table. Group | Example prompt | Prompts | Your site cited | Brand mentioned | Most-cited domains.
 4. **Prompts worth tracking**: the 10–20 exact prompts, grouped, ready to add with **Track selected** in the app.
-5. **How this report was made**: the fixed skill link line from `seo-report` (URL `https://openseo.so/docs/skills/ai-prompt-research`, text "OpenSEO AI Prompt Research skill"), the keywords researched, the market (US English), the research date, any prompt checked with `explore_prompt`, and a note that the questions and answers come from DataForSEO's dataset, built mostly from Google "People also ask" questions, not logged ChatGPT prompts or OpenSEO's own collected answers.
+5. **How this report was made**: the fixed skill link line from `seo-report` (URL `https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo/skills/ai-prompt-research`, text "SiDJI SEO AI Prompt Research skill"), the keywords researched, the market (US English), the research date, any prompt checked with `explore_prompt`, and a note that the questions and answers come from DataForSEO's dataset, built mostly from Google "People also ask" questions, not logged ChatGPT prompts or SiDJI SEO's own collected answers.
 
 In chat, lead with one shareable line built from the evidence, for example: "ChatGPT's answers about AI meeting notes cite G2 and two Reddit threads, not your site." Then the report link.
 
 ## Guardrails
 
-- These are prompts from DataForSEO's dataset with the citations it recorded. They are not answers OpenSEO collected, and they can differ from what ChatGPT says today. Prompt Tracking collects observed, dated answers, and `ai-visibility-audit` reads them. An `explore_prompt` spot check is one API answer, not a tracked observation.
+- These are prompts from DataForSEO's dataset with the citations it recorded. They are not answers SiDJI SEO collected, and they can differ from what ChatGPT says today. Prompt Tracking collects observed, dated answers, and `ai-visibility-audit` reads them. An `explore_prompt` spot check is one API answer, not a tracked observation.
 - Never estimate how often a question is asked in AI assistants, or turn prompt counts into users, traffic or revenue.
 - A prompt without a brand mention is an observation about that recorded answer, not proof the brand is never recommended.
 - Keep observations and proposals apart: "answers cite these three domains" is an observation; "get listed on them" is a proposal.

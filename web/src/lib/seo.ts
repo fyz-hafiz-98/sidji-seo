@@ -1,8 +1,8 @@
 import { FREE_TOOL_PATHS } from "@/lib/free-tools/free-tool-paths";
 
-const DEFAULT_SITE_URL = "https://openseo.so";
-const DEFAULT_SOCIAL_IMAGE_PATH = "/social-card.jpg";
-const DEFAULT_SOCIAL_IMAGE_ALT = "OpenSEO product preview";
+const DEFAULT_SITE_URL = "http://127.0.0.1:4322";
+const DEFAULT_SOCIAL_IMAGE_PATH = "/og/default.png";
+const DEFAULT_SOCIAL_IMAGE_ALT = "SiDJI SEO product preview";
 
 export const SITE_URL = (
   process.env.SITE_URL ??
@@ -21,7 +21,7 @@ export function toCanonicalUrl(path: string): string {
   return new URL(toCanonicalPath(path), `${SITE_URL}/`).href;
 }
 
-// Pages whose share preview shows the page title on an OpenSEO card instead
+// Pages whose share preview shows the page title on an SiDJI SEO card instead
 // of the generic product card. An entry ending in "/" covers every page
 // below it, but not the index page itself. scripts/generate-social-cards.js
 // renders the cards from the built HTML.
@@ -92,7 +92,7 @@ export function buildPageSeo({
     meta: [
       { title: fullTitle },
       ...(description ? [{ name: "description", content: description }] : []),
-      { property: "og:site_name", content: "OpenSEO" },
+      { property: "og:site_name", content: "SiDJI SEO" },
       { property: "og:type", content: ogType },
       { property: "og:title", content: fullTitle },
       ...(description
@@ -103,7 +103,7 @@ export function buildPageSeo({
       { property: "og:image:alt", content: socialImageAlt },
       {
         property: "og:image:type",
-        content: titleCard ? "image/png" : "image/jpeg",
+        content: "image/png",
       },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },

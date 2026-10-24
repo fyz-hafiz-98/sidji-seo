@@ -45,7 +45,7 @@ function SignedOutInvitationCard({ invitationId }: { invitationId: string }) {
   return (
     <AuthPageCard title="You&rsquo;re invited">
       <p className="text-sm text-muted-foreground">
-        You&rsquo;ve been invited to join an organization on OpenSEO. Sign in
+        You&rsquo;ve been invited to join an organization on SiDJI SEO. Sign in
         with the email address that received the invitation to accept it.
       </p>
       <div className="space-y-2">
@@ -234,7 +234,7 @@ function InvitationCard({
         <span className="font-medium">
           {invitationQuery.data.organizationName}
         </span>{" "}
-        on OpenSEO.
+        on SiDJI SEO.
       </p>
       {actionError ? (
         <Alert variant="destructive">

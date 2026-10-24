@@ -38,7 +38,7 @@ export function BlogLayout({ children }: { children: ReactNode }) {
             to="/"
             className="shrink-0 text-base font-semibold text-neutral-950 transition-opacity hover:opacity-80"
           >
-            OpenSEO
+            SiDJI SEO
           </Link>
 
           <nav

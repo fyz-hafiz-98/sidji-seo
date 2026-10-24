@@ -3,7 +3,7 @@ name: competitor-analysis
 description: "Analyze one competitor's organic footprint, ranking keywords, content themes, backlinks, and gaps."
 ---
 
-# OpenSEO Competitor Analysis
+# SiDJI SEO Competitor Analysis
 
 ## Goal
 
@@ -31,7 +31,7 @@ The project-context tools are free and shared with the app and other agents.
 
 Deliver through the `seo-report` skill, saving with `skill: "competitor-analysis"`. If that skill is not available, say so and stop before writing HTML.
 
-## OpenSEO MCP tools
+## SiDJI SEO MCP tools
 
 - `get_domain_overview`: baseline organic traffic and keyword count.
 - `get_search_console_performance`: when comparing to the user's own domain and Search Console is connected, use it as the first-party baseline (real clicks/impressions/CTR/position) instead of estimating the user's own performance from third-party data.
@@ -79,7 +79,7 @@ Sections in this order:
 4. **Keyword themes** — a table of theme, example keywords, volume, and whether the user competes there. A bar chart when a few themes dominate the footprint.
 5. **Content patterns and authority** — prose, with a note for anything inferred from keyword rows rather than seen on a page.
 6. **What to do next** — an ordered list, shortest useful.
-7. **How this report was made** — opens with the skill link line from `seo-report`, pointing at `https://openseo.so/docs/skills/competitor-analysis` ("OpenSEO Competitor Analysis skill"), then which tools reported what, and what you checked yourself.
+7. **How this report was made** — opens with the skill link line from `seo-report`, pointing at `https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo/skills/competitor-analysis` ("SiDJI SEO Competitor Analysis skill"), then which tools reported what, and what you checked yourself.
 
 ## Guardrails
 

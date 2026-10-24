@@ -1,16 +1,15 @@
 {
   "name": "openseo",
-  "displayName": "OpenSEO",
+  "displayName": "SiDJI SEO",
   "version": "1.0.23",
-  "description": "Research keywords and competitors, audit sites, track rankings and AI visibility, and use connected Search Console data from your AI assistant.",
+  "description": "SiDJI SEO personal fork: keyword and competitor research, audits, rankings, AI visibility and connected Google data. Requires your own local instance and provider keys.",
   "author": {
     "name": "OpenSEO",
     "url": "https://openseo.so"
   },
-  "homepage": "https://openseo.so",
-  "privacyPolicyUrl": "https://openseo.so/privacy",
+  "homepage": "https://github.com/fyz-hafiz-98/sidji-seo",
   "icon": "./assets/icon.png",
-  "repository": "https://github.com/every-app/open-seo",
+  "repository": "https://github.com/fyz-hafiz-98/sidji-seo",
   "license": "MIT",
   "keywords": [
     "seo",
