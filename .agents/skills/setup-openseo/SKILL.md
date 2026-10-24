@@ -15,8 +15,10 @@ A regular ChatGPT web/desktop cloud conversation cannot install a local desktop 
 
 ## 2. Use this fork's plugin and public skills
 
-Use the client's supported installation flow with this fork, not the hosted upstream marketplace connector:
-https://github.com/fyz-hafiz-98/sidji-seo
+Use the client's supported installation flow with this checkout on branch feat/sidji-seo-rebrand, not the hosted upstream marketplace connector:
+https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo
+
+Until the fork PR is merged, main still contains the upstream plugin and hosted MCP configuration. Do not install from the repository URL with an implicit default branch. Select the review branch explicitly if this client supports it; otherwise use this branch's local plugin directory or its verified custom MCP flow. Do not merge or publish the branch as part of agent setup.
 
 Only install the twelve public workflows in plugins/openseo/skills. Never install internal repository maintenance skills. Use the existing scope, preserve personal edits and avoid duplicate skills.
 

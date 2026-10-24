@@ -12,7 +12,12 @@ describe("agent setup prompt", () => {
     expect(prompt).toContain("https://seo.example.com/mcp");
     expect(prompt).toContain("https://seo.example.com/settings");
     expect(prompt).not.toContain("https://app.openseo.so");
-    expect(prompt).toContain("https://github.com/fyz-hafiz-98/sidji-seo");
+    expect(prompt).toContain(
+      "https://github.com/fyz-hafiz-98/sidji-seo/tree/feat/sidji-seo-rebrand/plugins/openseo",
+    );
+    expect(prompt).toContain(
+      "Do not install from the repository URL with an implicit default branch.",
+    );
     expect(prompt).not.toContain("plugin_asdk_");
     expect(prompt).toContain("SiDJI SEO");
     expect(prompt).not.toContain("internal: true");

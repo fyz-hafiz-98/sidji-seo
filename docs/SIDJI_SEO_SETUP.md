@@ -76,6 +76,8 @@ The implemented endpoint is `/mcp`. The shipped plugin uses `http://127.0.0.1:30
 
 Use the app's **Agent setup** prompt to get the actual current origin. Client-specific configuration syntax can differ: inspect your installed client's help and add the literal URL, rather than assuming environment placeholders expand. Public workflow sources are in `plugins/openseo/skills/`; do not install the repository's internal maintenance skills. Updating skills must preserve the configured endpoint, credentials and personal edits.
 
+Until the fork PR is merged, install the plugin from this checkout on `feat/sidji-seo-rebrand`, or explicitly select that branch in a client that supports branch selection. The fork's `main` still contains the upstream hosted configuration. A repository URL with an implicit default branch is not the SiDJI plugin. If branch selection is unavailable, use this branch's local plugin directory or the literal custom MCP configuration above.
+
 A cloud client cannot reach this laptop's loopback address. Remote connection is not ready: it needs a separately authorized HTTPS deployment with authentication. Do not use a public tunnel or replace the endpoint with hosted OpenSEO. No global Codex/Hermes configuration is modified by this repository.
 
 ## Docker (requires an existing Docker installation)
